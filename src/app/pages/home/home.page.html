@@ -1,3 +1,42 @@
 <div class="home-container">
-	home page
+	<img class="main-image" src="/assets/images/lux.png">
+
+	<div class="parallax" style="background-image: url('/assets/images/1.jpg')"></div>
+
+	<div class="cover content">
+		<div>
+			<img class="img-button" src="/assets/images/lux-consort.jpg">
+			<img class="img-button" src="/assets/images/lux-ensemble.jpg">
+		</div>
+
+		<div class="item-row">
+			<div class="item">
+				<p class="number">76</p>
+				<p class="text" translate>home.concerts</p>
+			</div>
+
+			<div class="item">
+				<p class="number">16.336€</p>
+				<p class="text" translate>home.donations</p>
+			</div>
+		</div>
+
+		<div class="item-row">
+			<div class="card shadow" *ngFor="let name of foundations">
+				<p>{{ name }}</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="parallax" style="background-image: url('/assets/images/2.jpg')"></div>
+
+	<div class="cover content">
+		<div class="title" translate>home.colaborators</div>
+
+		<div class="item-row">
+			<div class="image" *ngFor="let name of organizations">
+				<img src="/assets/images/colaborators/{{ name }}">
+			</div>
+		</div>
+	</div>
 </div>
