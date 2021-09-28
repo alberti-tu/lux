@@ -2,13 +2,14 @@
 	display: flex;
 
 	img {
+		transition: all 0.75s;
+		background: white;
 		padding: 1em;
 		width: 32px;
 
 		&:hover {
 			background: #00000033;
-			transition: all 0.75s;
-			border-radius: 50%;
+			border-radius: 100%;
 		}
 	}
 }
