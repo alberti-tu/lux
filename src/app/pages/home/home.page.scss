@@ -3,39 +3,43 @@
 	text-align: center;
 
 	.main-image {
-		max-width: 100%;
+		max-width: 60%;
 		height: auto;
 	}
 
 	.cover {
-		min-height: 100vh;
+		min-height: 100%;
+
+		&:last-child {
+			padding-bottom: 96px;	// height of footer
+		}
 	}
 
 	.content {
-		position: relative;
 		background: white;
-		padding: 3em 0em;
 
 		.title {
-			font-size: 1.75em;
+			font-size: 1.5em;
 			line-height: 1.5em;
 			text-transform: uppercase;
 			margin: 2em;
 		}
 	}
 
-	.img-button {
-		transition: all 250ms;
-		margin: 1.5rem 0em;
+	.img-group {
+		margin: 2em 0em;
 
-		cursor: pointer;
-
-		&:hover {
-			transform: scale(1.25);
-		}
-
-		&:active {
-			transform: translateY(0.125rem);
+		.img-button {
+			transition: all 250ms;
+			cursor: pointer;
+	
+			&:hover {
+				transform: scale(1.25);
+			}
+	
+			&:active {
+				transform: translateY(0.125rem);
+			}
 		}
 	}
 
@@ -45,25 +49,27 @@
 		flex-direction: row;
 		justify-content: space-around;
 
-		margin: 3em 2em;
+		margin: 0em 2em;
 
 		.item {
 			margin: 1em;
 
 			.number {
 				font-size: 2.5em;
+				line-height: 1em;
 				margin: 0em;
 			}
 
 			.text {
 				font-size: 1.25em;
-				margin: 1em 0em 0em;
+				line-height: 1em;
+				margin: 0em;
 			}
 		}
 
 		.card {
 			border-radius: 16px;
-			padding: 1.5em;
+			padding: 1.25em;
 			margin: 1em;
 
 			p {
@@ -77,6 +83,7 @@
 		}
 
 		.image {
+			align-self: center;
 			margin: 1em;
 
 			img {
