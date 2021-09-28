@@ -1,3 +1,4 @@
 <div class="header-container">
-	<div class="link" *ngFor="let link of links" routerLink="/{{ link }}" translate>header.{{ link }}</div>
+	<div class="navbar" *ngFor="let link of links" routerLink="/{{ link }}" translate>header.{{ link }}</div>
+	<side-menu></side-menu>
 </div>

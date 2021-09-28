@@ -1,0 +1,14 @@
+.side-menu-container {
+	display: flex;
+
+	img {
+		padding: 1em;
+		width: 32px;
+
+		&:hover {
+			background: #00000033;
+			transition: all 0.75s;
+			border-radius: 50%;
+		}
+	}
+}
