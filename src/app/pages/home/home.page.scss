@@ -10,10 +10,7 @@
 
 	.cover {
 		min-height: 100%;
-
-		&:last-child {
-			padding-bottom: 84px;	// height of footer
-		}
+		padding-bottom: 132px;	// height of footer
 	}
 
 	.content {
