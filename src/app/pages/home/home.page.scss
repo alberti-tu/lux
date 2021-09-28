@@ -2,10 +2,35 @@
 	height: 100vh;
 	text-align: center;
 
-	.main-image {
-		max-width: 60%;
-		height: auto;
-		margin-top: 1em;
+	.title-main {
+		padding: 4em 1em;
+		cursor: default;
+
+		p {
+			text-transform: uppercase;
+			margin: 0;
+
+			&.first {
+				font-family: 'Times New Roman', Times, serif;
+				font-size: 4em;
+				line-height: 1em;
+				font-weight: 500;
+			}
+
+			&.second {
+				font-family: 'Times New Roman', Times, serif;
+				font-size: 3em;
+				line-height: 1em;
+				font-weight: 500;
+			}
+
+			&.third {
+				font-family:'Courier New', Courier, monospace;
+				font-size: 1em;
+				line-height: 2.5em;
+				font-weight: 700;
+			}
+		}
 	}
 
 	.cover {
@@ -24,48 +49,52 @@
 		}
 	}
 
-	.img-group {
-		margin: 2em 0em;
-
-		.img-button {
-			transition: all 250ms;
-			cursor: pointer;
-	
-			&:hover {
-				transform: scale(1.25);
-			}
-	
-			&:active {
-				transform: translateY(0.125rem);
-			}
-		}
-	}
-
 	.item-row {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: space-around;
 
-		margin: 0em 2em;
+		margin: 2em;
 
-		.item {
+		.title {
+			font-family: 'Times New Roman', Times, serif;
+			text-transform: uppercase;	
+
+			p {
+				font-weight: 500;
+				line-height: 1em;
+				margin: 0em;
+
+				&.first {
+					font-size: 2em;
+				}
+	
+				&.second {
+					font-size: 1.25em;
+				}
+			}
+		}
+
+		.message {
 			margin: 1em;
 
-			.number {
-				font-size: 2.5em;
+			p {
 				line-height: 1em;
 				margin: 0em;
-			}
 
-			.text {
-				font-size: 1.25em;
-				line-height: 1em;
-				margin: 0em;
+				&.number {
+					font-size: 2.5em;
+				}
+	
+				&.text {
+					font-size: 1.25em;
+				}
 			}
 		}
 
 		.card {
+			background: white;
 			border-radius: 16px;
 			padding: 1.25em;
 			margin: 1em;
@@ -73,10 +102,6 @@
 			p {
 				font-size: 1.25em;
 				margin: 0em;
-			}
-
-			&:hover {
-				transform: scale(1.1);
 			}
 		}
 
