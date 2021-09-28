@@ -3,35 +3,10 @@
 	text-align: center;
 	padding: 4em 0em;
 
-	.title-main {
-		padding: 3em 0em 0em;
-		cursor: default;
-
-		p {
-			text-transform: uppercase;
-			margin: 0;
-
-			&.first {
-				font-family: 'Times New Roman', Times, serif;
-				font-size: 4em;
-				line-height: 1em;
-				font-weight: 500;
-			}
-
-			&.second {
-				font-family: 'Times New Roman', Times, serif;
-				font-size: 3em;
-				line-height: 1em;
-				font-weight: 500;
-			}
-
-			&.third {
-				font-family:'Courier New', Courier, monospace;
-				font-size: 1em;
-				line-height: 2.5em;
-				font-weight: 700;
-			}
-		}
+	.main-image {
+		max-width: 20%;
+		height: auto;
+		margin-top: 1em;
 	}
 
 	.cover {
@@ -114,6 +89,13 @@
 				height: auto;
 				width: 256px;
 			}
+		}
+	}
+
+	// Only Mobile
+	@media (max-width: 480px) {
+		.main-image {
+			max-width: 50%;
 		}
 	}
 }
