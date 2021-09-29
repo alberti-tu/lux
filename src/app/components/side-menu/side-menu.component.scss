@@ -6,10 +6,36 @@
 		background: white;
 		padding: 1em;
 		width: 32px;
+		cursor: pointer;
 
-		&:hover {
+		&:active {
 			background: #00000033;
 			border-radius: 100%;
+		}
+	}
+
+	.menu-screen {
+		position: fixed;
+		height: 100vh;
+		width: 100vw;
+
+		.menu-group {
+			position: relative;
+			text-align: center;
+			top: 30%;
+
+			.menu-item {
+				width: min-content;
+    			margin: 0 auto 1em;
+
+				font-size: 2em;
+				line-height: 1em;
+
+				text-transform: uppercase;
+				
+				color: white;
+				cursor: pointer;
+			}
 		}
 	}
 }

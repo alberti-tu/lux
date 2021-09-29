@@ -1,3 +1,10 @@
 <div class="side-menu-container">
-	<img src="/assets/icons/menu.svg">
+	<img src="/assets/icons/menu.svg" (click)="open()">
+
+	<div class="menu-screen" [@menu]="isOpen ? 'open' : 'closed'" (click)="close()">
+		<div class="menu-group">
+			<div class="menu-item focus" *ngFor="let link of links" routerLink="/{{ link }}" translate>header.{{ link }}</div>
+		</div>
+	</div>
 </div>
+

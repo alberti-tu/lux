@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
 	public links: string[] = [
-		// 'shows',
 		'home',
-		// 'about'
+		'shows',
+		'galery',
+		'about'
 	];
 
 }
