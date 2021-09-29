@@ -1,3 +1,4 @@
 export const environment = {
-	production: false
+	production: false,
+	pages: [ 'home', 'shows', 'gallery', 'about' ]
 };

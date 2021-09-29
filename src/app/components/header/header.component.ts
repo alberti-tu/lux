@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
 	selector: 'header',
@@ -7,11 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-	public links: string[] = [
-		'home',
-		'shows',
-		'galery',
-		'about'
-	];
+	public links: string[] = [];
+
+	constructor() {
+		this.links = environment.pages
+	}
 
 }
