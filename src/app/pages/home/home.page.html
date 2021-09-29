@@ -30,8 +30,8 @@
 		</div>
 
 		<div class="item-row">
-			<div class="card shadow focus" *ngFor="let name of foundations">
-				<p>{{ name }}</p>
+			<div class="card shadow focus" *ngFor="let link of foundations">
+				<a href="{{ link.url }}">{{ link.name }}</a>
 			</div>
 		</div>
 	</div>
@@ -42,8 +42,10 @@
 		<div class="title" translate>home.colaborators</div>
 
 		<div class="item-row">
-			<div class="image focus" *ngFor="let name of organizations">
-				<img src="/assets/images/colaborators/{{ name }}">
+			<div class="image focus" *ngFor="let link of organizations">
+				<a href="{{ link.url }}">
+					<img src="/assets/images/colaborators/{{ link.icon }}">
+				</a>
 			</div>
 		</div>
 	</div>
