@@ -30,16 +30,25 @@
 		}
 	}
 
-	img {
-		filter: grayscale(100%);
-		padding: 0.75em;
-		width: 32px;
-		cursor: pointer;
+	.social-networks {
+		img {
+			filter: grayscale(100%);
+			padding: 0.75em;
+			width: 32px;
+			cursor: pointer;
+	
+			&:hover {
+				background: #00000033;
+				transition: all 0.75s;
+				border-radius: 50%;
+			}
+		}
+	}
 
-		&:hover {
-			background: #00000033;
-			transition: all 0.75s;
-			border-radius: 50%;
+	// Only Mobile
+	@media (max-width: 640px) {
+		.social-networks {
+			display: none;
 		}
 	}
 }
