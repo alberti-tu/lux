@@ -11,7 +11,7 @@
 
 	.cover {
 		min-height: 100%;
-		padding-bottom: 78px;	// height of footer
+		padding-bottom: 2em;
 	}
 
 	.content {
@@ -32,25 +32,6 @@
 		justify-content: space-around;
 
 		margin: 2em;
-
-		.title {
-			font-family: 'Times New Roman', Times, serif;
-			text-transform: uppercase;	
-
-			p {
-				font-weight: 500;
-				line-height: 1em;
-				margin: 0em;
-
-				&.first {
-					font-size: 2em;
-				}
-	
-				&.second {
-					font-size: 1.25em;
-				}
-			}
-		}
 
 		.message {
 			margin: 1em;

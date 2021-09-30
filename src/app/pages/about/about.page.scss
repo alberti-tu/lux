@@ -1,3 +1,33 @@
 .about-container {
 	height: 100vh;
+	text-align: center;
+	padding: 4em 0em;
+
+	.item-row {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+
+		margin: 2em;
+
+		.title {
+			font-family: 'Times New Roman', Times, serif;
+			text-transform: uppercase;	
+
+			p {
+				font-weight: 500;
+				line-height: 1em;
+				margin: 0em;
+
+				&.first {
+					font-size: 2em;
+				}
+	
+				&.second {
+					font-size: 1.25em;
+				}
+			}
+		}
+	}
 }
