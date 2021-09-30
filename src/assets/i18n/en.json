@@ -1,4 +1,5 @@
 {
+	"about.file": "Financial report {{ year }}",
 	"footer.text": "Donations to Lux Fundació",
 	"header.about": "About",
 	"header.home": "Home",
