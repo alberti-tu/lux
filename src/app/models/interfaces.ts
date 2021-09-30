@@ -1,4 +1,5 @@
 export interface Configuration {
+	contact: Contact;
 	foundations: Link[];
 	organizations: Link[];
 	pages: string[];
@@ -7,6 +8,12 @@ export interface Configuration {
 	profiles: Profile[];
 	reports: string[];
 	links: Link[];
+}
+
+export interface Contact {
+	address: string;
+	email: string;
+	phone: string;
 }
 
 export interface Profile {

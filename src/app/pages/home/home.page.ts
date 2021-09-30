@@ -8,8 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 export class HomePage {
 
-	public foundations: Link[] = [];
-	public organizations: Link[] = [];
+	public foundations: Link[];
+	public organizations: Link[];
 
 	constructor() {
 		this.foundations = environment.foundations;

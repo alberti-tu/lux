@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Profile } from 'src/app/models/interfaces';
+import { Contact, Profile } from 'src/app/models/interfaces';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -8,15 +8,17 @@ import { environment } from 'src/environments/environment';
 })
 export class AboutPage {
 
-	public press: string[] = [];
-	public profiles: Profile[] = [];
-	public reports: string[] = [];
+	public contact: Contact;
+	public press: string[];
+	public profiles: Profile[];
+	public reports: string[];
 
 	public openFile(file: string): void {
         window.open('/assets/files/report-' + file + '.pdf');
     }
 
 	constructor() {
+		this.contact = environment.contact;
 		this.press = environment.press;
 		this.profiles = environment.profiles;
 		this.reports = environment.reports;

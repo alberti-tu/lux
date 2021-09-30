@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class FooterComponent {
 
-	public links: Link[] = [];
+	public links: Link[];
 
 	constructor() {
 		this.links = environment.links;
