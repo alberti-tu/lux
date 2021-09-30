@@ -11,6 +11,20 @@
 	<div class="separator"></div>
 
 	<div class="title" translate>about.title.2</div>
+	<div class="group-row">
+		<div class="profile shadow" *ngFor="let user of profiles">
+			<img src="/assets/profiles/santi.jpg">
+			<div class="info">
+				<p>{{ user.name }}</p>
+				<p>{{ user.role }}</p>
+				<div class="links" >
+					<a href="{{ link.url }}" *ngFor="let link of user.links">
+						<img src="/assets/icons/{{ link.icon }}.svg">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="separator"></div>
 

@@ -37,6 +37,83 @@
 		justify-content: space-evenly;
 		margin: 0em 0em 2em;
 
+		.profile {
+			$height: 256px;
+
+			position: relative;
+			border-radius: 16px;
+			height: $height;
+			margin: 2em;
+
+			img {
+				border-radius: 16px;
+				height: $height;
+			}
+
+			.info {
+				position: absolute;
+
+				border-radius: 0px 0px 16px 16px;
+
+				font-size: 0em;
+				opacity: 0;
+
+				p {
+					text-align: center;
+					
+					margin: 0.5em;
+
+					&:first-child {
+						text-transform: uppercase;
+						font-weight: 500;
+						font-size: 1.25em;
+					}
+
+					&:last-child {
+						text-transform: lowercase;
+						font-size: 1em;
+					}
+				}
+
+				.links {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					justify-content: center;
+
+					img {
+						border-radius: 0px;
+						margin: 0.25em;
+						height: 32px;
+						width: 32px;
+						cursor: pointer;
+
+						&:hover {
+							background: #00000033;
+							transition: all 0.75s;
+							border-radius: 50%;
+						}
+					}
+				}
+			}
+
+			&:hover {
+				.info {
+					transition: opacity 0.75s;
+
+					height: 45%;
+					width: 100%;
+					top: 55%;
+					left: 0%;
+
+					opacity: 1;
+					font-size: 1em;
+					background: rgba(0, 0, 0, 0.5);
+					color: white;
+				}
+			}
+		}
+
 		.file {
 			text-align: center;
 			border-radius: 16px;
