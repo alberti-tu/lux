@@ -8,6 +8,7 @@ import { Link } from 'src/app/models/interfaces';
 export class HomePage {
 
 	public foundations: Link[] = [
+		{ name: "Arrels fundació", url: "https://www.arrelsfundacio.org" },
 		{ name: "El somriure dels nens", url: "https://www.facebook.com/elsomriuredelsnens" },
 		{ name: "Banc d'aliments", url: "https://www.bancdelsaliments.org" },
 		{ name: "LIMFACAT", url: "https://sites.google.com/site/limfacatassociacio" },
