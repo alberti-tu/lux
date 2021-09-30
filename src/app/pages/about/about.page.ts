@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Profile } from 'src/app/models/interfaces';
+import { environment } from 'src/environments/environment';
 
 @Component({
 	templateUrl: './about.page.html',
@@ -7,23 +8,18 @@ import { Profile } from 'src/app/models/interfaces';
 })
 export class AboutPage {
 
-	public profiles: Profile[] = [
-		{
-			name: 'Santi Mirón',
-			role: 'viola de gamba',
-			photo: 'santi.jpg',
-			links: [
-				{ icon: 'facebook', url: 'https://www.facebook.com/profile.php?id=100008669134913' }
-			]
-		}
-	];
-
-	public reports: string[] = [ '2018', '2017', '2016', '2015' ];
-
-	public press: string[] = [ 'Núvol', 'Revista musical catalana'];
+	public press: string[] = [];
+	public profiles: Profile[] = [];
+	public reports: string[] = [];
 
 	public openFile(file: string): void {
         window.open('/assets/files/report-' + file + '.pdf');
     }
+
+	constructor() {
+		this.press = environment.press;
+		this.profiles = environment.profiles;
+		this.reports = environment.reports;
+	}
 
 }

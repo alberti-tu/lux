@@ -1,3 +1,14 @@
+export interface Configuration {
+	foundations: Link[];
+	organizations: Link[];
+	pages: string[];
+	press: string[];
+	production: boolean;
+	profiles: Profile[];
+	reports: string[];
+	links: Link[];
+}
+
 export interface Profile {
 	name?: string;
 	role?: string;

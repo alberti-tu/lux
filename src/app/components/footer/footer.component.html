@@ -5,16 +5,8 @@
 	</div>
 
 	<div class="social-networks">
-		<a href="https://www.facebook.com/luxfundacio">
-			<img src="/assets/icons/facebook.svg">
-		</a>
-		
-		<a href="https://www.instagram.com/lux_fundacio">
-			<img src="/assets/icons/instagram.svg">
-		</a>
-
-		<a href="https://www.youtube.com/channel/UCgjysEgq2bRrLgKF1psSyFg">
-			<img src="/assets/icons/youtube.svg">
+		<a href="{{ link.url }}" *ngFor="let link of links">
+			<img src="/assets/icons/{{ link.icon }}.svg">
 		</a>
 	</div>
 </div>

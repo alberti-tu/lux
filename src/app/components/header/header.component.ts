@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Link } from 'src/app/models/interfaces';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -8,10 +9,12 @@ import { environment } from 'src/environments/environment';
 })
 export class HeaderComponent {
 
-	public links: string[] = [];
+	public links: Link[] = [];
+	public pages: string[] = [];
 
 	constructor() {
-		this.links = environment.pages
+		this.links = environment.links;
+		this.pages = environment.pages;
 	}
 
 }

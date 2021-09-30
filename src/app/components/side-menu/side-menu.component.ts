@@ -16,10 +16,10 @@ import { environment } from 'src/environments/environment';
 })
 export class SideMenuComponent {
 
-	public links: string[] = [];
+	public pages: string[] = [];
 
 	constructor() {
-		this.links = environment.pages
+		this.pages = environment.pages;
 	}
 
 	public isOpen: boolean = false;
