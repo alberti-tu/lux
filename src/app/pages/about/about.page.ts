@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
 })
 export class AboutPage {
 
-	public files: string[] = [ '2018', '2017', '2016', '2015' ];
+	public reports: string[] = [ '2018', '2017', '2016', '2015' ];
+
+	public press: string[] = [ 'Núvol', 'Revista musical catalana'];
 
 	public openFile(file: string): void {
         window.open('/assets/files/report-' + file + '.pdf');
