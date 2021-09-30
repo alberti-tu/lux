@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AboutPage {
 
-	public files: string[] = [ '2015', '2016', '2017', '2018' ];
+	public files: string[] = [ '2018', '2017', '2016', '2015' ];
 
 	public openFile(file: string): void {
         window.open('/assets/files/report-' + file + '.pdf');
