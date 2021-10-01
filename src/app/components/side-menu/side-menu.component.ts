@@ -16,7 +16,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SideMenuComponent {
 
-	public pages: string[];
+	public pages: string[] | undefined;
 
 	constructor() {
 		this.pages = environment.pages;

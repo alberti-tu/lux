@@ -8,10 +8,10 @@ import { environment } from 'src/environments/environment';
 })
 export class AboutPage {
 
-	public contact: Contact;
-	public press: string[];
-	public profiles: Profile[];
-	public reports: string[];
+	public contact: Contact | undefined;
+	public press: string[] | undefined;
+	public profiles: Profile[] | undefined;
+	public reports: string[] | undefined;
 
 	public openFile(file: string): void {
         window.open('/assets/files/' + file);

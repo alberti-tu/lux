@@ -9,8 +9,8 @@ import { environment } from 'src/environments/environment';
 })
 export class HeaderComponent {
 
-	public links: Link[];
-	public pages: string[];
+	public links: Link[] | undefined;
+	public pages: string[] | undefined;
 
 	constructor() {
 		this.links = environment.links;

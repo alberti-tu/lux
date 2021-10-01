@@ -1,11 +1,14 @@
 import { Configuration } from "src/app/models/interfaces";
 
 export const environment: Configuration = {
+	bank: 'IBAN ES 43 2100 3049 1622 0035 6171',
+	concerts: '76',
 	contact: {
 		address: 'C/Cuba 2, 08030 Barcelona',
 		email: 'info@luxfundacio.org',
 		phone: '+34 654 22 02 63'
 	},
+	donations: '16.336€',
 	foundations: [
 		{ name: "Arrels fundació", url: "https://www.arrelsfundacio.org" },
 		{ name: "El somriure dels nens", url: "https://www.facebook.com/elsomriuredelsnens" },

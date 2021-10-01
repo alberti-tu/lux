@@ -9,9 +9,11 @@ import { environment } from 'src/environments/environment';
 })
 export class FooterComponent {
 
-	public links: Link[];
+	public bank: string | undefined;
+	public links: Link[] | undefined;
 
 	constructor() {
+		this.bank = environment.bank;
 		this.links = environment.links;
 	}
 

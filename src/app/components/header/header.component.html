@@ -1,8 +1,8 @@
-<div class="header-container">
+<div class="header-container" *ngIf="pages && pages.length > 0">
 	<div class="navbar" *ngFor="let path of pages" routerLink="/{{ path }}" translate>header.{{ path }}</div>
 	<side-menu></side-menu>
 
-	<div class="social-networks">
+	<div class="social-networks" *ngIf="links && links.length > 0">
 		<a href="{{ link.url }}" *ngFor="let link of links">
 			<img src="/assets/icons/{{ link.icon }}.svg">
 		</a>
