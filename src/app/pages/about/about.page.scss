@@ -3,6 +3,17 @@
 	padding: 4em 0em;
 	margin: 0 auto;
 
+	.title {
+		text-transform: uppercase;
+		border-bottom: solid 1px black;
+		text-align: left;
+		font-size: 1.5em;
+		font-weight: 500;
+		line-height: 1em;
+		padding: 0.5em 2em;
+		margin: 2em 1em;
+	}
+
 	.description {
 		p {
 			text-align: justify;
@@ -15,43 +26,8 @@
 		}
 	}
 
-	.contact {
-		background: #00000033;
-		border-radius: 16px;
-		padding: 1em 2em;
-		margin: 1em auto;
-
-		width: max-content;
-		
-		.item {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-
-			align-items: center;
-
-			img {
-				height: 32px;
-				width: 32px;
-				margin: 1em;
-			}
-
-			a {
-				margin: 1em;
-			}
-		}
-	}
-
 	.timeline {
 		margin: 0em 2em;
-	}
-
-	.title {
-		text-transform: uppercase;
-		text-align: center;
-		font-size: 1.5em;
-		line-height: 1em;
-		padding: 1em;
 	}
 
 	.group-row {
@@ -78,11 +54,6 @@
 				position: absolute;
 				border-radius: 0px 0px 16px 16px;
 
-				//top: 0%;
-				//font-size: 0em;
-				//opacity: 0;
-
-				/// Provisional ///
 				height: 45%;
 				width: 100%;
 				top: 55%;
@@ -92,7 +63,6 @@
 				font-size: 1em;
 				background: #00000080;
 				color: white;
-				/// Provisional ///
 
 				p {
 					text-align: center;
@@ -132,22 +102,6 @@
 					}
 				}
 			}
-
-			&:hover {
-				.info {
-					transition: opacity 0.75s;
-
-					height: 45%;
-					width: 100%;
-					top: 55%;
-					left: 0%;
-
-					opacity: 1;
-					font-size: 1em;
-					background: #00000080;
-					color: white;
-				}
-			}
 		}
 
 		.file {
@@ -166,6 +120,33 @@
 			p {
 				text-transform: uppercase;
 				margin: 1em 0em 0em;
+			}
+		}
+	}
+
+	.contact {
+		background: #0000000d;
+		border-radius: 16px;
+		padding: 1em 2em;
+		margin: 2em auto;
+
+		width: max-content;
+		
+		.item {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			align-items: center;
+
+			img {
+				height: 32px;
+				width: 32px;
+				margin: 1em;
+			}
+
+			a {
+				margin: 1em;
 			}
 		}
 	}
