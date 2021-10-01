@@ -1,10 +1,7 @@
 .about-container {
+	max-width: 1024px;
 	padding: 4em 0em;
-
-	.main-image {
-		border-radius: 100%;
-		max-width: 30vw;
-	}
+	margin: 0 auto;
 
 	.description {
 		p {
