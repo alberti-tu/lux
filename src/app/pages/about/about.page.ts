@@ -14,7 +14,7 @@ export class AboutPage {
 	public reports: string[];
 
 	public openFile(file: string): void {
-        window.open('/assets/files/report-' + file + '.pdf');
+        window.open('/assets/files/' + file);
     }
 
 	constructor() {

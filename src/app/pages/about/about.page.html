@@ -61,9 +61,9 @@
 
 	<div class="title" translate>about.title.5</div>
 	<div class="group-row">
-		<div class="file shadow focus" *ngFor="let pdf of reports" (click)="openFile(pdf)">
+		<div class="file shadow focus" *ngFor="let year of reports" (click)="openFile('report-' + year + '.pdf')">
 			<img src="/assets/icons/file.svg">
-			<p>{{ "about.file.report" | translate: { year: pdf } }}</p>
+			<p>{{ "about.file.report" | translate: { year: year } }}</p>
 		</div>
 	</div>
 
@@ -71,7 +71,7 @@
 
 	<div class="title" translate>about.title.6</div>
 	<div class="group-row">
-		<div class="file shadow focus" *ngFor="let pdf of press" (click)="openFile(pdf)">
+		<div class="file shadow focus" *ngFor="let pdf of press" (click)="openFile(pdf + '.pdf')">
 			<img src="/assets/icons/news.svg">
 			<p>{{ pdf }}</p>
 		</div>
