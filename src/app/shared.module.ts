@@ -12,7 +12,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import localeEn from "@angular/common/locales/en"
+import localeEs from "@angular/common/locales/es"
+import { registerLocaleData } from "@angular/common";
+import { CustomDatePipe } from "src/app/pipes/date.pipe";
+
+registerLocaleData(localeEn);
+registerLocaleData(localeEs);
+
 @NgModule({
+	declarations: [
+		CustomDatePipe
+	],
 	exports: [
 		CommonModule,
 		FormsModule,
@@ -26,7 +37,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 		MatSelectModule,
 		MatSidenavModule,
 		MatSliderModule,
-		MatToolbarModule
+		MatToolbarModule,
+
+		CustomDatePipe
+	],
+	providers: [
+		CustomDatePipe
 	]
 })
 export class SharedModule { }
