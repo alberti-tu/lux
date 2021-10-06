@@ -89,6 +89,7 @@
 					justify-content: center;
 
 					img {
+						transition: all 500ms;
 						border-radius: 0px;
 						margin: 0.25em;
 						height: 32px;
@@ -97,7 +98,6 @@
 
 						&:hover {
 							background: #00000033;
-							transition: all 0.75s;
 							border-radius: 50%;
 						}
 					}
@@ -152,7 +152,7 @@
 			}
 		}
 
-		.map {
+		iframe {
 			border-radius: 16px;
 			border: none;
 			height: 256px;

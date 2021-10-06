@@ -17,10 +17,9 @@
 	z-index: 5;
 
 	.navbar {
+		transition: all 750ms;
 		width: 128px;
-
 		font-size: 1em;
-		transition: all 0.75s;
 		text-align: center;
 		text-transform: uppercase;
 		padding: 1.375em 1em;
@@ -48,7 +47,7 @@
 	
 			&:hover {
 				background: #00000033;
-				transition: all 0.75s;
+				transition: all 500ms;
 				border-radius: 50%;
 			}
 		}

@@ -56,8 +56,8 @@ export const environment: Configuration = {
 	],
 	reports: [ "2018", "2017", "2016", "2015" ],
 	shows: [
-		{ name: "Test 1", address: "Plaza España, Barcelona", date: "18:30 8-12-2021", url: "" },
-		{ name: "Test 2", address: "Plaza Catalunya, Barcelona", date: "21:00 10-11-2021", url: "" },
-		{ name: "Test 3", address: "Plaza España, Sevilla", date: "18:30 30-5-2022", url: "" }
+		{ name: "Test 1", address: "Plaza España, Barcelona", date: "00:00 1-1-2021", price: "5€", url: "https://www.google.es" },
+		{ name: "Test 2", address: "Plaza Catalunya, Barcelona", date: "00:00 1-7-2021", price: "15€", url: "https://www.facebook.com" },
+		{ name: "Test 3", address: "Plaza España, Sevilla", date: "18:30 3-5-2022", price: undefined, url: undefined }
 	]
 };

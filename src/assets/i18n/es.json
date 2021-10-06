@@ -24,5 +24,6 @@
 	"header.shows": "Conciertos",
 	"home.colaborators": "Organizaciones que han colaborado con Lux Fundació",
 	"home.concerts": "conciertos",
-	"home.donations": "en donaciones"
+	"home.donations": "en donaciones",
+	"show.price": "Gratis"
 }

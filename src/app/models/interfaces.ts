@@ -38,5 +38,6 @@ export interface Show {
 	name?: string;
 	address?: string;
 	date?: string;
+	price?: string;
 	url?: string;
 }

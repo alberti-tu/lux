@@ -1,10 +1,22 @@
 <div class="shows-container">
 	<div class="list" *ngIf="shows && shows.length > 0">
-		<div class="item" *ngFor="let show of shows">
-			{{ show.name }}
-			{{ show.date }}
-			{{ show.address }}
-			{{ show.url }}
+		<div class="item shadow" *ngFor="let show of shows">
+			<div class="info">
+				<h1 *ngIf="show.name">{{ show.name }}</h1>
+				<h2 *ngIf="show.address">{{ show.address }}</h2>
+				<h2 *ngIf="show.date">{{ show.date | date: 'd/M/yyyy H:mm' }}</h2>
+	
+				<div class="ticket shadow" *ngIf="show.url" (click)="openLink(show.url)">
+					<p *ngIf="show.price">{{ show.price }}</p>
+					<img src="/assets/icons/ticket.svg">
+				</div>
+
+				<div class="ticket shadow" *ngIf="!show.url">
+					<p translate>show.price</p>
+				</div>
+			</div>
+
+			<iframe [src]="getMap(show.address)" *ngIf="show.address"></iframe>
 		</div>
 	</div>
 </div>

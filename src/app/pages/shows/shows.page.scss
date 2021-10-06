@@ -4,8 +4,86 @@
 	margin: 0 auto;
 
 	.list {
+		padding: 0em 2em;
+
 		.item {
-			
+			transition: all 500ms;
+
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			justify-content: space-between;
+
+			border-radius: 16px;
+			margin: 2em 0em;
+
+			.info {
+				width: 60%;
+
+				h1 {
+					font-size: 1.25em;
+					color: black;
+					margin: 1em 1em 0em;
+				}
+
+				h2 {
+					font-size: 1em;
+					color: gray;
+					margin: 0em 1.3em;
+				}
+
+				.ticket {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+	
+					align-self: baseline;
+					align-items: center;
+					width: max-content;
+					float: right;
+	
+					border-radius: 16px;
+					padding: 0em 0.75em;
+					margin: 1em;
+	
+					background: #dddd00;
+					cursor: pointer;
+	
+					p {
+						text-transform: capitalize;
+						font-size: 1.25em;
+						text-align: right;
+						margin: 0.5em;
+					}
+	
+					img {
+						margin: 0.5em;
+						width: 32px;
+					}
+				}
+			}
+
+			iframe {
+				border: none;
+				width: 40%;
+			}
+		}
+	}
+
+	// Only Mobile
+	@media (max-width: 640px) {
+		.list {
+			.item {
+				.info {
+					width: 100%;
+				}
+
+				iframe {
+					height: 128px;
+					width: 100%;
+				}
+			}
 		}
 	}
 }
