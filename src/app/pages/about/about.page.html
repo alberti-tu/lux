@@ -1,5 +1,4 @@
 <div class="about-container">
-
 	<div>
 		<div class="title" translate>about.title.1</div>
 		<div class="description">
@@ -77,8 +76,7 @@
 				<p>{{ contact.address }}</p>
 			</a>
 
-			<iframe class="item map" *ngIf="contact.address" [src]="mapUrlSafe"></iframe>
+			<iframe class="item map" *ngIf="contact.address" [src]="getMap(contact.address)"></iframe>
 		</div>
 	</div>
-
 </div>

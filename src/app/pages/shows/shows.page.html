@@ -1,3 +1,10 @@
 <div class="shows-container">
-
+	<div class="list" *ngIf="shows && shows.length > 0">
+		<div class="item" *ngFor="let show of shows">
+			{{ show.name }}
+			{{ show.date }}
+			{{ show.address }}
+			{{ show.url }}
+		</div>
+	</div>
 </div>

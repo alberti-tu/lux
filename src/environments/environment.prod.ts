@@ -24,6 +24,11 @@ export const environment: Configuration = {
 		{ name: "Save the children", url: "https://www.savethechildren.es" }
 	],
 	key: "AIzaSyBy5_DiEN6mNM3jf8VKLZy1JhymEa47UQk",
+	links: [
+		{ icon: "facebook", url: "https://www.facebook.com/luxfundacio" },
+		{ icon: "instagram", url: "https://www.instagram.com/lux_fundacio" },
+		{ icon: "youtube", url: "https://www.youtube.com/channel/UCgjysEgq2bRrLgKF1psSyFg" }
+	],
 	organizations: [
 		{ icon: "hotel-subur.png", url: "https://www.hotelsubur.com" },
 		{ icon: "bcn-alberg.jpg", url: "https://www.catalunya.com/mare-de-deu-de-montserrat-17-13005-25" },
@@ -50,9 +55,9 @@ export const environment: Configuration = {
 		}
 	],
 	reports: [ "2018", "2017", "2016", "2015" ],
-	links: [
-		{ icon: "facebook", url: "https://www.facebook.com/luxfundacio" },
-		{ icon: "instagram", url: "https://www.instagram.com/lux_fundacio" },
-		{ icon: "youtube", url: "https://www.youtube.com/channel/UCgjysEgq2bRrLgKF1psSyFg" }
+	shows: [
+		{ name: "Test 1", address: "Plaza España, Barcelona", date: "18:30 8-12-2021", url: "" },
+		{ name: "Test 2", address: "Plaza Catalunya, Barcelona", date: "21:00 10-11-2021", url: "" },
+		{ name: "Test 3", address: "Plaza España, Sevilla", date: "18:30 30-5-2022", url: "" }
 	]
 };

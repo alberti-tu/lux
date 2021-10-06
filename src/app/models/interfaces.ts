@@ -5,13 +5,14 @@ export interface Configuration {
 	donations?: string;
 	foundations?: Link[];
 	key?: string;
+	links?: Link[];
 	organizations?: Link[];
 	pages?: string[];
 	press?: string[];
 	production?: boolean;
 	profiles?: Profile[];
 	reports?: string[];
-	links?: Link[];
+	shows?: Show[];
 }
 
 export interface Contact {
@@ -31,4 +32,11 @@ export interface Link {
 	name?: string;
 	url?: string;
 	icon?: string;
+}
+
+export interface Show {
+	name?: string;
+	address?: string;
+	date?: string;
+	url?: string;
 }
