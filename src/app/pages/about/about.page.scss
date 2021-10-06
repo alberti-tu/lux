@@ -132,6 +132,7 @@
 		margin: 2em auto;
 
 		width: max-content;
+		min-width: 25vw;
 		
 		.item {
 			display: flex;
@@ -146,9 +147,16 @@
 				margin: 1em;
 			}
 
-			a {
+			p {
 				margin: 1em;
 			}
+		}
+
+		.map {
+			border-radius: 16px;
+			border: none;
+			height: 256px;
+			width: 100%;
 		}
 	}
 

@@ -64,18 +64,20 @@
 	<div *ngIf="contact && (contact.email || contact.address || contact.phone)">
 		<div class="title" translate>about.title.6</div>
 		<div class="contact">
-			<div class="item" *ngIf="contact.email">
+			<a class="item" *ngIf="contact.email" href="mailto:{{ contact.email }}">
 				<img src="/assets/icons/email.svg">
-				<a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
-			</div>
-			<div class="item" *ngIf="contact.address">
-				<img src="/assets/icons/marker.svg">
-				<a href="https://maps.app.goo.gl/B39o7HFQgYJPn5gD8">{{ contact.address }}</a>
-			</div>
-			<div class="item" *ngIf="contact.phone">
+				<p>{{ contact.email }}</p>
+			</a>
+			<a class="item" *ngIf="contact.phone" href="tel:{{ contact.phone }}">
 				<img src="/assets/icons/phone.svg">
-				<a href="tel:{{ contact.phone }}">{{ contact.phone }}</a>
-			</div>
+				<p>{{ contact.phone }}</p>
+			</a>
+			<a class="item" *ngIf="contact.address">
+				<img src="/assets/icons/marker.svg">
+				<p>{{ contact.address }}</p>
+			</a>
+
+			<iframe class="item map" *ngIf="contact.address" [src]="mapUrlSafe"></iframe>
 		</div>
 	</div>
 

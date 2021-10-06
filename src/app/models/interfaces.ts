@@ -4,6 +4,7 @@ export interface Configuration {
 	contact?: Contact;
 	donations?: string;
 	foundations?: Link[];
+	key?: string;
 	organizations?: Link[];
 	pages?: string[];
 	press?: string[];

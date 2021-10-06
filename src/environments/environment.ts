@@ -1,14 +1,14 @@
 import { Configuration } from "src/app/models/interfaces";
 
 export const environment: Configuration = {
-	bank: 'IBAN ES 43 2100 3049 1622 0035 6171',
-	concerts: '76',
+	bank: "IBAN ES 43 2100 3049 1622 0035 6171",
+	concerts: "76",
 	contact: {
-		address: 'C/Cuba 2, 08030 Barcelona',
-		email: 'info@luxfundacio.org',
-		phone: '+34 654 22 02 63'
+		address: "C/Cuba 2, 08030 Barcelona",
+		email: "info@luxfundacio.org",
+		phone: "+34 654 22 02 63"
 	},
-	donations: '16.336€',
+	donations: "16.336€",
 	foundations: [
 		{ name: "Arrels fundació", url: "https://www.arrelsfundacio.org" },
 		{ name: "El somriure dels nens", url: "https://www.facebook.com/elsomriuredelsnens" },
@@ -23,6 +23,7 @@ export const environment: Configuration = {
 		{ name: "Centre de fauna salvatge de la masia camadoca (Berguedà)", url: "https://www.descobrir.cat/ca/agenda/visita-al-centre-de-fauna-salvatge-de-la-masia-camadoca-153699.php" },
 		{ name: "Save the children", url: "https://www.savethechildren.es" }
 	],
+	key: "AIzaSyBy5_DiEN6mNM3jf8VKLZy1JhymEa47UQk",
 	organizations: [
 		{ icon: "hotel-subur.png", url: "https://www.hotelsubur.com" },
 		{ icon: "bcn-alberg.jpg", url: "https://www.catalunya.com/mare-de-deu-de-montserrat-17-13005-25" },
@@ -35,23 +36,23 @@ export const environment: Configuration = {
 		{ icon: "laCaixa.jpg", url: "https://www.caixabank.es" },
 		{ icon: "bcn-diputació.jpg", url: "https://www.diba.cat" }
 	],
-	pages: [ 'home', 'shows', 'gallery', 'about' ],
-	press: [ 'Núvol', 'Revista musical catalana'],
+	pages: [ "home", "shows", "gallery", "about" ],
+	press: [ "Núvol", "Revista musical catalana"],
 	production: false,
 	profiles: [
 		{
-			name: 'Santi Mirón',
-			role: 'viola de gamba',
-			photo: 'santi.jpg',
+			name: "Santi Mirón",
+			role: "viola de gamba",
+			photo: "santi.jpg",
 			links: [
-				{ icon: 'facebook', url: 'https://www.facebook.com/profile.php?id=100008669134913' }
+				{ icon: "facebook", url: "https://www.facebook.com/profile.php?id=100008669134913" }
 			]
 		}
 	],
-	reports: [ '2018', '2017', '2016', '2015' ],
+	reports: [ "2018", "2017", "2016", "2015" ],
 	links: [
-		{ icon: 'facebook', url: 'https://www.facebook.com/luxfundacio' },
-		{ icon: 'instagram', url: 'https://www.instagram.com/lux_fundacio' },
-		{ icon: 'youtube', url: 'https://www.youtube.com/channel/UCgjysEgq2bRrLgKF1psSyFg' }
+		{ icon: "facebook", url: "https://www.facebook.com/luxfundacio" },
+		{ icon: "instagram", url: "https://www.instagram.com/lux_fundacio" },
+		{ icon: "youtube", url: "https://www.youtube.com/channel/UCgjysEgq2bRrLgKF1psSyFg" }
 	]
 };
