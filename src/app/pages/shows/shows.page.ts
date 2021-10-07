@@ -14,7 +14,9 @@ export class ShowsPage {
 
 	constructor(private sanitizer: DomSanitizer) {
 		if (environment.shows) {
-			this.shows = environment.shows.filter(item => (item.date && new Date(item.date) > new Date()));
+			this.shows = environment.shows
+				.filter(item => (item.date && new Date(item.date) > new Date()))
+				.sort((a, b) => (a.date && b.date ? new Date(a.date).getTime() - new Date(b.date).getTime() : 0));
 			this.mapList = new Array(this.shows.length).fill(false);
 		}
 	}

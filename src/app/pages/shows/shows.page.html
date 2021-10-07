@@ -21,4 +21,9 @@
 			<iframe [src]="getMap(show.address)" *ngIf="show.address" loading="lazy"></iframe>
 		</div>
 	</div>
+
+	<div class="empty" *ngIf="!shows || shows.length == 0">
+		<img src="/assets/icons/advice.svg">
+		<p translate>show.empty</p>
+	</div>
 </div>

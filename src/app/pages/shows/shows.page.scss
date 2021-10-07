@@ -73,7 +73,7 @@
 					width: 16px;
 
 					border-radius: 100%;
-					background: #c4c4db;
+					background: #505050;
 
 					cursor: pointer;
 				}
@@ -110,6 +110,22 @@
 			iframe {
 				width: 0%;
 			}
+		}
+	}
+
+	.empty {
+		text-align: center;
+		padding: 5em 2em;
+
+		img {
+			height: 128px;
+			width: 128px;
+		}
+
+		p {
+			font-size: 1.5em;
+			line-height: 1.5em;
+			margin: 3em 0em 0em;
 		}
 	}
 
