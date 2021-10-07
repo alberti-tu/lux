@@ -8,9 +8,9 @@ import { environment } from 'src/environments/environment';
 	styleUrls: ['./shows.page.scss']
 })
 export class ShowsPage {
-	
-	public mapList: boolean[] = [];
+
 	public shows: Show[] | undefined;
+	public mapList: boolean[] = [];
 
 	constructor(private sanitizer: DomSanitizer) {
 		if (environment.shows) {
@@ -30,19 +30,19 @@ export class ShowsPage {
 		return this.sanitizer.bypassSecurityTrustResourceUrl(url);
 	}
 
-	public toggleMap(item: Show): void {
-		if (this.shows) {
-			const index = this.shows.indexOf(item);
-			this.mapList[index] = !this.mapList[index];
-		}
-	}
-
 	public displayMap(item: Show): boolean {
 		if (this.shows) {
 			const index = this.shows.indexOf(item);
 			return this.mapList[index];
 		} else {
 			return false;
+		}
+	}
+
+	public toggleMap(item: Show): void {
+		if (this.shows) {
+			const index = this.shows.indexOf(item);
+			this.mapList[index] = !this.mapList[index];
 		}
 	}
 }
