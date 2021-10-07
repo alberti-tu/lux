@@ -12,7 +12,9 @@ export class ShowsPage {
 	public shows: Show[] | undefined;
 
 	constructor(private sanitizer: DomSanitizer) {
-		this.shows = environment.shows;
+		if (environment.shows) {
+			this.shows = environment.shows.filter(item => (item.date && new Date(item.date) > new Date()));
+		}
 	}
 
 	public openLink(url: string): void {

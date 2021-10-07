@@ -16,7 +16,7 @@
 				</div>
 			</div>
 
-			<iframe [src]="getMap(show.address)" *ngIf="show.address"></iframe>
+			<iframe [src]="getMap(show.address)" *ngIf="show.address" loading="lazy"></iframe>
 		</div>
 	</div>
 </div>
