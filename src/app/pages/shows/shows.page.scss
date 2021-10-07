@@ -7,8 +7,6 @@
 		padding: 0em 2em;
 
 		.item {
-			transition: all 500ms;
-
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -19,18 +17,19 @@
 			margin: 2em 0em;
 
 			.info {
-				width: 60%;
+				position: relative;
 
 				h1 {
+					margin: 1.2em 1.2em 0em;
 					font-size: 1.25em;
 					color: black;
-					margin: 1em 1em 0em;
 				}
 
-				h2 {
+				p {
+					margin: 0em 1.5em;
+					line-height: 1.5em;
 					font-size: 1em;
 					color: gray;
-					margin: 0em 1.3em;
 				}
 
 				.ticket {
@@ -45,7 +44,7 @@
 	
 					border-radius: 16px;
 					padding: 0em 0.75em;
-					margin: 1em;
+					margin: 1em 1.5em 1.5em;
 	
 					background: #dddd00;
 					cursor: pointer;
@@ -54,6 +53,7 @@
 						text-transform: capitalize;
 						font-size: 1.25em;
 						text-align: right;
+						color: black;
 						margin: 0.5em;
 					}
 	
@@ -62,11 +62,53 @@
 						width: 32px;
 					}
 				}
+
+				.bubble {
+					position: absolute;
+					top: 50%;
+					left: 100%;
+
+					padding: 0.5em;
+					height: 16px;
+					width: 16px;
+
+					border-radius: 100%;
+					background: #c4c4db;
+
+					cursor: pointer;
+				}
 			}
 
 			iframe {
 				border: none;
+			}
+		}
+
+		.show-map {
+			.info {
+				width: 60%;
+
+				.bubble {
+					transform: translate(-50%, -50%) rotate(180deg);
+				}
+			}
+
+			iframe {
 				width: 40%;
+			}
+		}
+
+		.hide-map {
+			.info {
+				width: 100%;
+
+				.bubble {
+					transform: translate(-50%, -50%) rotate(0deg);
+				}
+			}
+
+			iframe {
+				width: 0%;
 			}
 		}
 	}
@@ -74,13 +116,36 @@
 	// Only Mobile
 	@media (max-width: 640px) {
 		.list {
-			.item {
+			.show-map {
 				.info {
 					width: 100%;
+
+					.bubble {
+						top: calc(100% + 128px);
+						left: 50%;
+						transform: translate(-50%, -50%) rotate(90deg);
+					}
 				}
 
 				iframe {
 					height: 128px;
+					width: 100%;
+				}
+			}
+
+			.hide-map {
+				.info {
+					width: 100%;
+
+					.bubble {
+						top: 100%;
+						left: 50%;
+						transform: translate(-50%, -50%) rotate(-90deg);
+					}
+				}
+
+				iframe {
+					height: 0px;
 					width: 100%;
 				}
 			}

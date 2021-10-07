@@ -8,12 +8,14 @@ import { environment } from 'src/environments/environment';
 	styleUrls: ['./shows.page.scss']
 })
 export class ShowsPage {
-
+	
+	public mapList: boolean[] = [];
 	public shows: Show[] | undefined;
 
 	constructor(private sanitizer: DomSanitizer) {
 		if (environment.shows) {
 			this.shows = environment.shows.filter(item => (item.date && new Date(item.date) > new Date()));
+			this.mapList = new Array(this.shows.length).fill(false);
 		}
 	}
 
@@ -24,5 +26,21 @@ export class ShowsPage {
 	public getMap(query: string): SafeResourceUrl {
 		const url = "https://www.google.com/maps/embed/v1/place?key=" + environment.key + "&q=" + query;
 		return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+	}
+
+	public toggleMap(item: Show): void {
+		if (this.shows) {
+			const index = this.shows.indexOf(item);
+			this.mapList[index] = !this.mapList[index];
+		}
+	}
+
+	public displayMap(item: Show): boolean {
+		if (this.shows) {
+			const index = this.shows.indexOf(item);
+			return this.mapList[index];
+		} else {
+			return false;
+		}
 	}
 }
