@@ -2,4 +2,83 @@
 	max-width: 1024px;
 	padding: 4em 0em;
 	margin: 0 auto;
+
+	.title {
+		text-transform: uppercase;
+		border-bottom: solid 1px black;
+		text-align: left;
+		font-size: 1.5em;
+		font-weight: 500;
+		line-height: 1em;
+		padding: 0.5em 2em;
+		margin: 2em 1em;
+	}
+
+	.discography {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		margin: 10vmin;
+
+		.disc {
+			transition: all 1000ms ease-in-out;
+			position: relative;
+			max-height: 512px;
+			height: 75vmin;
+			flex: 1;
+
+			img {
+				transition: all 1000ms ease-in-out;
+				filter: grayscale(100%);
+				object-fit: cover;
+				height: 100%;
+				width: 100%;
+			}
+
+			p {
+				transition: all 500ms ease-in-out;
+
+				position: absolute;
+				bottom: 0;
+				left: 0;
+
+				background: #ff1eadbf;
+				color: black;
+
+				transform: rotate(-90deg);
+				transform-origin: 0% 0%;
+
+				white-space: nowrap;
+				text-align: center;
+				min-width: 100%;
+
+				font-size: 0.75em;
+				padding: 0.5em;
+				
+				margin: 0;
+			}
+
+			&:hover {
+				flex-grow: 10;
+
+				img {
+					filter: grayscale(0);
+				}
+
+				p {
+					background: #00000080;
+					color: white;
+
+					transform: rotate(0deg);
+					
+					white-space: normal;
+					line-height: 1em;
+					font-size: 1em;
+
+					padding: 0.5em 0em;
+				}
+			}
+		}
+	}
 }

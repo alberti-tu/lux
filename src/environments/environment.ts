@@ -9,6 +9,10 @@ export const environment: Configuration = {
 		phone: "+34 654 22 02 63"
 	},
 	donations: "16.336€",
+	discography: [
+		{ name: 'Rezos y danzas. De batallas, xácaras, pasacalles y otros tientos', image: 'https://www.luxfundacio.org/wp-content/uploads/2016/02/llantos_web_2.png' },
+		{ name: 'Suonate en trio per diversi strumenti di JS Bach', image: 'https://www.luxfundacio.org/wp-content/uploads/2016/02/bach_web_2.png' }
+	],
 	foundations: [
 		{ name: "Arrels fundació", url: "https://www.arrelsfundacio.org" },
 		{ name: "El somriure dels nens", url: "https://www.facebook.com/elsomriuredelsnens" },

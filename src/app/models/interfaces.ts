@@ -3,6 +3,7 @@ export interface Configuration {
 	concerts?: string;
 	contact?: Contact;
 	donations?: string;
+	discography?: Discography[];
 	foundations?: Link[];
 	key?: string;
 	links?: Link[];
@@ -19,6 +20,11 @@ export interface Contact {
 	address?: string;
 	email?: string;
 	phone?: string;
+}
+
+export interface Discography {
+	name: string;
+	image: string;
 }
 
 export interface Profile {
