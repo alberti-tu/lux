@@ -1,5 +1,16 @@
 <div class="player-container">
 	<img class="back focus" src="/assets/icons/back.svg" (click)="goBack()">
+
+	<div class="player"></div>
+
+	<div class="playlist">
+		<div class="single" *ngFor="let song of disc.songs">
+			<p>{{ song.name }}</p>
+			<p>4:35</p>
+		</div>
+	</div>
+
+
 	<!--
 	<div class="container">
 		<mat-toolbar color="primary" class="main-toolbar">

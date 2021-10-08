@@ -10,6 +10,42 @@
 		cursor: pointer;
 	}
 
+	.player {
+		
+	}
+
+	.playlist {
+		padding: 1em 3em;
+
+		.single {
+			transition: all 500ms;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			justify-content: space-between;
+
+			border-bottom: solid 1px black;
+			padding: 0.5em 1em;
+
+			cursor: pointer;
+
+			&:last-child {
+				border: none;
+			}
+
+			&:hover {
+				background: rgba(141, 141, 177, 0.2);
+			}
+
+			p {
+				font-size: 1.25em;
+				line-height: 2em;
+				margin: 0;
+			}
+		}
+	}
+
 
 	.container {
 		.main-toolbar {
