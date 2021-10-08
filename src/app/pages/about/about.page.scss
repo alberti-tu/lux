@@ -53,30 +53,31 @@
 
 			.info {
 				position: absolute;
-				border-radius: 0px 0px 16px 16px;
 
-				height: 45%;
 				width: 100%;
-				top: 55%;
+				bottom: 0%;
 				left: 0%;
 
-				opacity: 1;
-				font-size: 1em;
 				background: #00000080;
 				color: white;
+
+				border-radius: 0px 0px 16px 16px;
+
+				font-size: 1em;
+				opacity: 1;
 
 				p {
 					text-align: center;
 					
 					margin: 0.5em;
 
-					&:first-child {
+					&.name {
 						text-transform: uppercase;
 						font-weight: 500;
 						font-size: 1.25em;
 					}
 
-					&:last-child {
+					&.role {
 						text-transform: lowercase;
 						font-size: 1em;
 					}

@@ -1,19 +1,19 @@
 export interface Configuration {
-	bank: string;
-	concerts: string;
-	contact: Contact;
-	donations: string;
-	discography: Disc[];
-	foundations: Link[];
-	key: string;
-	links: Link[];
-	organizations: Link[];
-	pages: string[];
-	press: string[];
-	production: boolean;
-	profiles: Profile[];
-	reports: string[];
-	shows: Show[];
+	bank?: string;
+	concerts?: string;
+	contact?: Contact;
+	donations?: string;
+	discography?: Disc[];
+	foundations?: Link[];
+	key?: string;
+	links?: Link[];
+	organizations?: Link[];
+	pages?: string[];
+	press?: string[];
+	production?: boolean;
+	profiles?: Profile[];
+	reports?: string[];
+	shows?: Show[];
 }
 
 export interface Contact {
@@ -23,15 +23,15 @@ export interface Contact {
 }
 
 export interface Disc {
-	name: string;
-	image: string;
-	songs: Link[];
+	name?: string;
+	image?: string;
+	songs?: Link[];
 }
 
 export interface Profile {
-	name: string;
+	name?: string;
 	role?: string;
-	photo: string;
+	photo?: string;
 	links?: Link[];
 }
 
@@ -42,11 +42,11 @@ export interface Link {
 }
 
 export interface Show {
-	name: string;
-	address: string;
-	date: string;
-	price: string;
-	url: string;
+	name?: string;
+	address?: string;
+	date?: string;
+	price?: string;
+	url?: string;
 }
 
 export interface StreamState {
