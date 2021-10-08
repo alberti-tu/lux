@@ -8,10 +8,10 @@ import { environment } from 'src/environments/environment';
 })
 export class HomePage {
 
-	public concerts: string | undefined;
-	public donations: string | undefined;
-	public foundations: Link[] | undefined;
-	public organizations: Link[] | undefined;
+	public concerts: string;
+	public donations: string;
+	public foundations: Link[];
+	public organizations: Link[];
 
 	constructor() {
 		this.concerts = environment.concerts;

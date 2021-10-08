@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ShowsPage {
 
-	public shows: Show[] | undefined;
+	public shows: Show[];
 	public mapList: boolean[] = [];
 
 	constructor(private sanitizer: DomSanitizer) {

@@ -3,10 +3,9 @@
 	<div class="title" translate>gallery.title</div>
 
 	<div class="discography" *ngIf="discography && discography.length > 0">
-		<div class="disc" [ngClass]="selectedDisc(disc)" *ngFor="let disc of discography" (click)="selectDisc(disc)">
+		<div class="disc" *ngFor="let disc of discography">
 			<img src="{{ disc.image }}">
 			<p>{{ disc.name }}</p>
 		</div>
 	</div>
-
 </div>

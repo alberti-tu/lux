@@ -4,14 +4,17 @@ import { ComponentsModule } from "src/app/components/components.module";
 import { SharedModule } from "src/app/shared.module";
 
 import { GalleryPage } from "./gallery.page";
+import { PlayerPage } from "./player/player.page";
 
 const routes: Routes = [
-	{ path: '', component: GalleryPage }
+	{ path: '', component: GalleryPage },
+	{ path: 'player', component: PlayerPage }
 ];
 
 @NgModule({
 	declarations: [
-		GalleryPage
+		GalleryPage,
+		PlayerPage
 	],
 	imports: [
 		ComponentsModule,

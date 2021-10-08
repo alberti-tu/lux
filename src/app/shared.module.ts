@@ -12,6 +12,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+
 import localeEn from "@angular/common/locales/en"
 import localeEs from "@angular/common/locales/es"
 import { registerLocaleData } from "@angular/common";
@@ -38,6 +41,13 @@ registerLocaleData(localeEs);
 		MatSidenavModule,
 		MatSliderModule,
 		MatToolbarModule,
+
+		MatButtonModule,
+		MatListModule,
+		MatSliderModule,
+		MatIconModule,
+		MatToolbarModule,
+		MatCardModule,
 
 		CustomDatePipe
 	],

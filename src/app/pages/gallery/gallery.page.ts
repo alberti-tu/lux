@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Disc, Link } from 'src/app/models/interfaces';
+import { Disc, StreamState } from 'src/app/models/interfaces';
+import { AudioService } from 'src/app/services/audio/audio.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -8,22 +9,9 @@ import { environment } from 'src/environments/environment';
 })
 export class GalleryPage {
 
-	public discography: Disc[] | undefined;
-	public songs: Link[] | undefined;
+	public discography: Disc[];
 
-	private currentDisc: Disc | undefined;
-
-	constructor() {
+	constructor(public audioService: AudioService,) {
 		this.discography = environment.discography;
 	}
-
-	public selectDisc(item: Disc): void {
-		this.currentDisc = item;
-		this.songs = item.songs;
-	}
-
-	public selectedDisc(item: Disc): string {
-		return this.currentDisc && this.currentDisc.name == item.name ? 'active' : '';
-	}
-
 }
