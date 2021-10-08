@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Disc, StreamState } from 'src/app/models/interfaces';
 import { AudioService } from 'src/app/services/audio/audio.service';
 import { environment } from 'src/environments/environment';
@@ -9,6 +10,21 @@ import { environment } from 'src/environments/environment';
 })
 export class PlayerPage {
 
+	public disc: Disc;
+
+	constructor(public audioService: AudioService, private router: Router) {
+		this.disc = this.router.getCurrentNavigation().extras.state;
+
+		if (this.disc == null) {
+			this.router.navigateByUrl("/gallery");
+		}
+	}
+
+	public goBack(): void {
+		this.router.navigateByUrl("/gallery");
+	}
+
+	/*
 	public discography: Disc[];
 	public files = [
 		{
@@ -32,7 +48,7 @@ export class PlayerPage {
 	private currentDisc: Disc;
 	public currentFile: any;
 
-	constructor(public audioService: AudioService,) {
+	constructor(public audioService: AudioService, private router: Router) {
 		this.discography = environment.discography;
 
 		this.audioService.getState().subscribe(state => {
@@ -95,5 +111,6 @@ export class PlayerPage {
 	public onSliderChangeEnd(change: any): void {
 		this.audioService.seekTo(change.value);
 	}
+	*/
 
 }

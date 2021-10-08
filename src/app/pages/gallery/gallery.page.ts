@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Disc, StreamState } from 'src/app/models/interfaces';
-import { AudioService } from 'src/app/services/audio/audio.service';
+import { Router } from '@angular/router';
+import { Disc } from 'src/app/models/interfaces';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -11,7 +11,11 @@ export class GalleryPage {
 
 	public discography: Disc[];
 
-	constructor(public audioService: AudioService,) {
+	constructor(private router: Router) {
 		this.discography = environment.discography;
+	}
+
+	public open(item: Disc): void {
+		this.router.navigateByUrl('/gallery/player', { state: item });
 	}
 }
