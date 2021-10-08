@@ -1,9 +1,11 @@
 <div class="player-container">
 	<img class="back focus" src="/assets/icons/back.svg" (click)="goBack()">
 
-	<div class="player"></div>
+	<div class="player">
+		<img src="{{ disc.image }}">
+	</div>
 
-	<div class="playlist">
+	<div class="playlist" *ngIf="disc && disc.songs && disc.songs.length > 0">
 		<div class="single" *ngFor="let song of disc.songs">
 			<p>{{ song.name }}</p>
 			<p>4:35</p>
