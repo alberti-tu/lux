@@ -39,16 +39,17 @@
 		margin: 0em 0em 2em;
 
 		.profile {
-			$height: 256px;
-
 			position: relative;
+
 			border-radius: 16px;
-			height: $height;
+			height: 256px;
+			width: 192px;
 			margin: 2em;
 
 			img {
 				border-radius: 16px;
-				height: $height;
+				height: 100%;
+				width: 100%;
 			}
 
 			.info {
