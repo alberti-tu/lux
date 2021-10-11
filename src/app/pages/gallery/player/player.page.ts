@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Disc, StreamState } from 'src/app/models/interfaces';
+import { Disc, Link, StreamState } from 'src/app/models/interfaces';
 import { AudioService } from 'src/app/services/audio/audio.service';
 import { environment } from 'src/environments/environment';
 
@@ -8,7 +8,10 @@ import { environment } from 'src/environments/environment';
 	templateUrl: './player.page.html',
 	styleUrls: ['./player.page.scss']
 })
-export class PlayerPage {
+export class PlayerPage implements OnInit, OnDestroy {
+
+	public state: StreamState = this.audioService.initialState();
+	public currentFile: { file: Link, index: number };
 
 	public disc: Disc;
 
@@ -20,58 +23,20 @@ export class PlayerPage {
 		}
 	}
 
-	public goBack(): void {
-		this.router.navigateByUrl("/gallery");
+	public ngOnInit(): void {
+		this.audioService.getState().subscribe(state => this.state = state);
 	}
 
-	/*
-	public discography: Disc[];
-	public files = [
-		{
-			name: "Perfect",
-			artist: " Ed Sheeran",
-			url: "https://ia801504.us.archive.org/3/items/EdSheeranPerfectOfficialMusicVideoListenVid.com/Ed_Sheeran_-_Perfect_Official_Music_Video%5BListenVid.com%5D.mp3"
-		},
-		{
-			name: "Man Atkeya Beparwah",
-			artist: "Nusrat Fateh Ali Khan",
-			url: "https://ia801609.us.archive.org/16/items/nusratcollection_20170414_0953/Man%20Atkiya%20Beparwah%20De%20Naal%20Nusrat%20Fateh%20Ali%20Khan.mp3"
-		},
-		{
-			name: "Penny Lane",
-			artist: "The Beatles",
-			url: "https://ia801503.us.archive.org/15/items/TheBeatlesPennyLane_201805/The%20Beatles%20-%20Penny%20Lane.mp3"
-		}
-	];
-
-	public state: StreamState = undefined;
-	private currentDisc: Disc;
-	public currentFile: any;
-
-	constructor(public audioService: AudioService, private router: Router) {
-		this.discography = environment.discography;
-
-		this.audioService.getState().subscribe(state => {
-			this.state = state;
-		});
-	}
-
-	public selectDisc(item: Disc): void {
-		this.currentDisc = item;
-	}
-
-	public selectedDisc(item: Disc): string {
-		return this.currentDisc && this.currentDisc.name == item.name ? 'active' : '';
+	public ngOnDestroy(): void {
+		this.audioService.stop();
 	}
 
 	public playStream(url: string): void {
-		this.audioService.playStream(url).subscribe(events => {
-		// listening for fun here
-		});
+		this.audioService.playStream(url).subscribe(events => { /* listening for fun here */ });
 	}
 
-	public openFile(file: any, index: any): void {
-		this.currentFile = { index, file };
+	public openFile(file: Link, index: number): void {
+		this.currentFile = { file, index };
 		this.audioService.stop();
 		this.playStream(file.url);
 	}
@@ -89,28 +54,39 @@ export class PlayerPage {
 	}
 
 	public previous(): void {
+		if (this.isFirstPlaying()) {
+			return;
+		}
+
 		const index = this.currentFile.index - 1;
-		const file = this.files[index];
+		const file = this.disc.songs[index];
 		this.openFile(file, index);
 	}
 
 	public next(): void {
+		if (this.isLastPlaying()) {
+			return;
+		}
+
 		const index = this.currentFile.index + 1;
-		const file = this.files[index];
+		const file = this.disc.songs[index];
 		this.openFile(file, index);
 	}
 
 	public isFirstPlaying(): boolean {
-		return this.currentFile.index === 0;
+		return this.currentFile && this.currentFile.index == 0;
 	}
 
 	public isLastPlaying(): boolean {
-		return this.currentFile.index === this.files.length - 1;
+		return this.currentFile && this.currentFile.index == this.disc.songs.length - 1;
 	}
 
-	public onSliderChangeEnd(change: any): void {
-		this.audioService.seekTo(change.value);
+	public onSliderChangeEnd(event: any): void {
+		this.audioService.seekTo(event.target.value);
 	}
-	*/
+
+	public goBack(): void {
+		this.router.navigateByUrl("/gallery");
+	}
 
 }

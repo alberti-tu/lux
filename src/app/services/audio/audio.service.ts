@@ -45,7 +45,7 @@ export class AudioService {
 		this.audioPlayer.currentTime = seconds;
 	}
 
-	public formatTime(time: number, format: string = "HH:mm:ss"): string {
+	public formatTime(time: number, format: string = "mm:ss"): string {
 		const momentTime = time * 1000;
 		return moment.utc(momentTime).format(format);
 	}
@@ -124,13 +124,13 @@ export class AudioService {
 		});
 	}
 
-	private initialState(): StreamState {
+	public initialState(): StreamState {
 		return {
 			playing: false,
-			readableCurrentTime: '',
-			readableDuration: '',
-			duration: undefined,
-			currentTime: undefined,
+			readableCurrentTime: '00:00',
+			readableDuration: '00:00',
+			duration: 0,
+			currentTime: 0,
 			canplay: false,
 			error: false
 		};
