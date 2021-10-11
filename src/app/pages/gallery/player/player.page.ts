@@ -24,6 +24,10 @@ export class PlayerPage implements OnInit, OnDestroy {
 	}
 
 	public ngOnInit(): void {
+		this.currentFile = { file: this.disc.songs[0], index: 0 };
+		this.playStream(this.currentFile.file.url);
+		this.audioService.pause();
+
 		this.audioService.getState().subscribe(state => this.state = state);
 	}
 
@@ -31,14 +35,14 @@ export class PlayerPage implements OnInit, OnDestroy {
 		this.audioService.stop();
 	}
 
-	public playStream(url: string): void {
-		this.audioService.playStream(url).subscribe(events => { /* listening for fun here */ });
-	}
-
 	public openFile(file: Link, index: number): void {
 		this.currentFile = { file, index };
 		this.audioService.stop();
 		this.playStream(file.url);
+	}
+
+	public playStream(url: string): void {
+		this.audioService.playStream(url).subscribe(events => { /* listening for fun here */ });
 	}
 
 	public play(): void {
