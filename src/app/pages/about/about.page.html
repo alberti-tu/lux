@@ -13,7 +13,7 @@
 		<div class="title" translate>about.title.2</div>
 		<div class="group-row">
 			<div class="profile shadow" *ngFor="let user of profiles">
-				<img *ngIf="user.photo" src="/assets/profiles/{{ user.photo }}">
+				<img *ngIf="user.photo" src="/assets/images/{{ user.photo }}">
 				<div class="info">
 					<p class="name" *ngIf="user.name">{{ user.name }}</p>
 					<p class="role" *ngIf="user.role">{{ user.role }}</p>

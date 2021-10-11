@@ -12,22 +12,22 @@ export const environment: Configuration = {
 	discography: [
 		{
 			name: 'Rezos y danzas. De batallas, xácaras, pasacalles y otros tientos',
-			image: 'https://www.luxfundacio.org/wp-content/uploads/2016/02/llantos_web_2.png',
+			image: 'disc-1.png',
 			songs: [ 
-				{ name: 'Song 1', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'},
-				{ name: 'Song 2', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3'},
-				{ name: 'Song 3', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'},
-				{ name: 'Song 4', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3'},
+				{ name: 'Song 1', url: 'song-1.mp3'},
+				{ name: 'Song 2', url: 'song-2.mp3'},
+				{ name: 'Song 3', url: 'song-3.mp3'},
+				{ name: 'Song 4', url: 'song-4.mp3'},
 			]
 		},
 		{
 			name: 'Suonate en trio per diversi strumenti di JS Bach',
-			image: 'https://www.luxfundacio.org/wp-content/uploads/2016/02/bach_web_2.png',
+			image: 'disc-2.png',
 			songs: [ 
-				{ name: 'Song 5', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3'},
-				{ name: 'Song 6', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3'},
-				{ name: 'Song 7', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3'},
-				{ name: 'Song 8', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3'},
+				{ name: 'Song 5', url: 'song-5.mp3'},
+				{ name: 'Song 6', url: 'song-6.mp3'},
+				{ name: 'Song 7', url: 'song-7.mp3'},
+				{ name: 'Song 8', url: 'song-8.mp3'},
 			]
 		}
 	],

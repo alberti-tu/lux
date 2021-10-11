@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Disc, Link, StreamState } from 'src/app/models/interfaces';
 import { AudioService } from 'src/app/services/audio/audio.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
 	templateUrl: './player.page.html',
@@ -41,8 +40,8 @@ export class PlayerPage implements OnInit, OnDestroy {
 		this.playStream(file.url);
 	}
 
-	public playStream(url: string): void {
-		this.audioService.playStream(url).subscribe(events => { /* listening for fun here */ });
+	public playStream(name: string): void {
+		this.audioService.playStream('/assets/music/' + name).subscribe(events => { /* listening for fun here */ });
 	}
 
 	public play(): void {

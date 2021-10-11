@@ -5,9 +5,12 @@
 		<img class="disc-image" src="{{ disc.image }}">
 
 		<div class="time-bar">
-			<p>{{ state.readableCurrentTime }}</p>
 			<input type="range" step="1" min="0" max="{{ state.duration }}" value="{{ state.currentTime }}" (input)="onSliderChangeEnd($event)">
-			<p>{{ state.readableDuration }}</p>
+			
+			<div class="info">
+				<p>{{ state.readableCurrentTime }}</p>
+				<p>{{ state.readableDuration }}</p>
+			</div>
 		</div>
 
 		<div class="btn-group">
@@ -30,7 +33,7 @@
 	</div>
 
 	<div class="playlist" *ngIf="disc && disc.songs && disc.songs.length > 0">
-		<div class="single" *ngFor="let song of disc.songs; let i = index" (click)="openFile(song, i)">
+		<div class="single {{ currentFile.index == i ? 'selected' : '' }}" *ngFor="let song of disc.songs; let i = index" (click)="openFile(song, i)">
 			<p>{{ song.name }}</p>
 		</div>
 	</div>
