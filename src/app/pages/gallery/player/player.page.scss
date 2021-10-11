@@ -66,6 +66,7 @@
 
 				p {
 					align-self: center;
+					font-size: 0.75em;
 					line-height: 1em;
 					margin: 0.5em 0em;
 				}
@@ -79,7 +80,7 @@
 			justify-content: space-evenly;
 
 			align-items: center;
-			margin: 2em auto;
+			margin: 2em auto 4em;
 
 			max-width: 512px;
 
@@ -112,7 +113,7 @@
 	}
 
 	.playlist {
-		padding: 2em;
+		margin: 2em;
 
 		.single {
 			transition: all 500ms;

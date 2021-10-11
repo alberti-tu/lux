@@ -73,6 +73,7 @@
 
 					text-transform: uppercase;
 
+					visibility: hidden;
 					cursor: pointer;
 
 					&:hover {
@@ -85,6 +86,11 @@
 				.panel {
 					height: 100%;
 					opacity: 1;
+
+					.btn {
+						transition: all 1000ms;
+						visibility: visible;
+					}
 				}
 			}
 		}

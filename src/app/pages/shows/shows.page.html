@@ -5,8 +5,8 @@
 				<h1 *ngIf="show.name">{{ show.name }}</h1>
 				<p *ngIf="show.address">{{ show.address }}</p>
 				<p *ngIf="show.date">{{ show.date | date: 'EEEE, d MMMM yyyy | H:mm' }}</p>
-				<p *ngIf="show.price && show.url" translate>Entrada online</p>
-				<p *ngIf="show.price && !show.url" translate>Entrada en taquilla</p>
+				<p *ngIf="show.price && show.url" translate>show.ticket.online</p>
+				<p *ngIf="show.price && !show.url" translate>show.ticket.offline</p>
 
 				<div class="ticket shadow {{ show.url ? 'click' : '' }}" *ngIf="show.price || show.url" (click)="openLink(show.url)">
 					<p *ngIf="show.price">{{ show.price }}</p>

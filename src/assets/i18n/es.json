@@ -28,5 +28,7 @@
 	"home.concerts": "conciertos",
 	"home.donations": "en donaciones",
 	"show.empty": "Actualmente no hay conciertos anunciados, permanece atento a nuestras redes sociales.",
-	"show.price": "Gratis"
+	"show.price": "Gratis",
+	"show.ticket.offline": "Entrada en taquilla",
+	"show.ticket.online": "Entrada online"
 }

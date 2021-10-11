@@ -28,5 +28,7 @@
 	"home.concerts": "concerts",
 	"home.donations": "in donations",
 	"show.empty": "There are currently no concerts announced, stay tuned to our social networks.",
-	"show.price": "Free"
+	"show.price": "Free",
+	"show.ticket.offline": "Ticket office",
+	"show.ticket.online": "Online ticket"
 }
