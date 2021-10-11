@@ -12,7 +12,7 @@ export class GalleryPage {
 	public discography: Disc[];
 
 	constructor(private router: Router) {
-		this.discography = environment.discography;
+		this.discography = environment.discography.sort((a, b) => (a.year && b.year ? a.year - b.year : 0));
 	}
 
 	public open(item: Disc): void {

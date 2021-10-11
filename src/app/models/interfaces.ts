@@ -1,6 +1,6 @@
 export interface Configuration {
 	bank?: string;
-	concerts?: string;
+	concerts?: number;
 	contact?: Contact;
 	donations?: string;
 	discography?: Disc[];
@@ -25,6 +25,7 @@ export interface Contact {
 export interface Disc {
 	name?: string;
 	image?: string;
+	year?: number;
 	songs?: Link[];
 }
 

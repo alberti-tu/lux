@@ -2,7 +2,7 @@ import { Configuration } from "src/app/models/interfaces";
 
 export const environment: Configuration = {
 	bank: "IBAN ES 43 2100 3049 1622 0035 6171",
-	concerts: "76",
+	concerts: 76,
 	contact: {
 		address: "C/Cuba 2, 08030 Barcelona",
 		email: "info@luxfundacio.org",
@@ -11,23 +11,25 @@ export const environment: Configuration = {
 	donations: "16.336€",
 	discography: [
 		{
-			name: 'Rezos y danzas. De batallas, xácaras, pasacalles y otros tientos',
-			image: 'https://www.luxfundacio.org/wp-content/uploads/2016/02/llantos_web_2.png',
+			name: "Rezos y danzas. De batallas, xácaras, pasacalles y otros tientos",
+			image: "disc-1.png",
+			year: 2015,
 			songs: [ 
-				{ name: 'Song 1', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'},
-				{ name: 'Song 2', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3'},
-				{ name: 'Song 3', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'},
-				{ name: 'Song 4', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3'},
+				{ name: "Song 1", url: "song-1.mp3" },
+				{ name: "Song 2", url: "song-2.mp3" },
+				{ name: "Song 3", url: "song-3.mp3" },
+				{ name: "Song 4", url: "song-4.mp3" },
 			]
 		},
 		{
-			name: 'Suonate en trio per diversi strumenti di JS Bach',
-			image: 'https://www.luxfundacio.org/wp-content/uploads/2016/02/bach_web_2.png',
+			name: "Suonate en trio per diversi strumenti di JS Bach",
+			image: "disc-2.png",
+			year: 2016,
 			songs: [ 
-				{ name: 'Song 5', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3'},
-				{ name: 'Song 6', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3'},
-				{ name: 'Song 7', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3'},
-				{ name: 'Song 8', url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3'},
+				{ name: "Song 5", url: "song-5.mp3" },
+				{ name: "Song 6", url: "song-6.mp3" },
+				{ name: "Song 7", url: "song-7.mp3" },
+				{ name: "Song 8", url: "song-8.mp3" },
 			]
 		}
 	],
@@ -78,8 +80,9 @@ export const environment: Configuration = {
 	],
 	reports: [ "2018", "2017", "2016", "2015" ],
 	shows: [
-		{ name: "Test 1", address: "Plaza España, Barcelona", date: "00:00 11-1-2021", price: "5€", url: "https://www.google.es" },
-		{ name: "Test 2", address: "Plaza Catalunya, Barcelona", date: "00:00 12-8-2021", price: "15€", url: "https://www.facebook.com" },
-		{ name: "Test 3", address: "Plaza España, Sevilla", date: "18:30 3-5-2022", price: undefined, url: undefined }
+		{ name: "Test 1", address: "Les Rambles 4, Barcelona", date: "16:00 11-1-2021", price: "5€", url: "https://www.google.es" },
+		{ name: "Test 2", address: "Plaza Catalunya, Barcelona", date: "21:00 12-8-2021", price: "15€", url: "https://www.facebook.com" },
+		{ name: "Test 3", address: "Plaza España, Sevilla", date: "18:30 3-5-2022", price: undefined, url: undefined },
+		{ name: "Test 4", address: "Parque del Retiro, Madrid", date: "19:00 9-12-2022", price: "10€", url: undefined }
 	]
 };

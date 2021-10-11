@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class HomePage {
 
-	public concerts: string;
+	public concerts: number;
 	public donations: string;
 	public foundations: Link[];
 	public organizations: Link[];
