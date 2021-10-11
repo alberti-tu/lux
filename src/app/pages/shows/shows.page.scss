@@ -47,7 +47,11 @@
 					margin: 1em 1.5em 1.5em;
 	
 					background: #dddd00;
-					cursor: pointer;
+					cursor: default;
+
+					&.click {
+						cursor: pointer;
+					}
 	
 					p {
 						text-transform: capitalize;

@@ -22,7 +22,9 @@ export class ShowsPage {
 	}
 
 	public openLink(url: string): void {
-		window.open(url);
+		if (url) {
+			window.open(url);
+		}
 	}
 
 	public getMap(query: string): SafeResourceUrl {

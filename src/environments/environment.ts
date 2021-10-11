@@ -78,8 +78,9 @@ export const environment: Configuration = {
 	],
 	reports: [ "2018", "2017", "2016", "2015" ],
 	shows: [
-		{ name: "Test 1", address: "Plaza España, Barcelona", date: "00:00 11-1-2021", price: "5€", url: "https://www.google.es" },
-		{ name: "Test 2", address: "Plaza Catalunya, Barcelona", date: "00:00 12-8-2021", price: "15€", url: "https://www.facebook.com" },
-		{ name: "Test 3", address: "Plaza España, Sevilla", date: "18:30 3-5-2022", price: undefined, url: undefined }
+		{ name: "Test 1", address: "Les Rambles 4, Barcelona", date: "16:00 11-1-2021", price: "5€", url: "https://www.google.es" },
+		{ name: "Test 2", address: "Plaza Catalunya, Barcelona", date: "21:00 12-8-2021", price: "15€", url: "https://www.facebook.com" },
+		{ name: "Test 3", address: "Plaza España, Sevilla", date: "18:30 3-5-2022", price: undefined, url: undefined },
+		{ name: "Test 4", address: "Parque del Retiro, Madrid", date: "19:00 9-12-2022", price: "10€", url: undefined }
 	]
 };
