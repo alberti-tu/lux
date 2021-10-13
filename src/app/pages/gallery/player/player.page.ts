@@ -12,6 +12,9 @@ export class PlayerPage implements OnInit, OnDestroy {
 	public state: StreamState = this.audioService.initialState();
 	public currentFile: { file: Link, index: number };
 
+	private errorList: string[] = [];
+	private playerAction: "previous" | "next" | "play";
+
 	public disc: Disc;
 
 	constructor(public audioService: AudioService, private router: Router) {
@@ -27,7 +30,23 @@ export class PlayerPage implements OnInit, OnDestroy {
 		this.playStream(this.currentFile.file.url);
 		this.audioService.pause();
 
-		this.audioService.getState().subscribe(state => this.state = state);
+		this.audioService.getState().subscribe(state => {
+			if (state.error) {
+				this.errorList.push(this.currentFile.file.url);
+
+				if(this.isFirstPlaying()) {
+					this.playerAction = "next";
+				}
+
+				if (this.isLastPlaying()) {
+					this.playerAction = "previous";
+				}
+
+				this.playerAction == "previous" ? this.previous() : this.next();
+			}
+
+			this.state = state;
+		});
 	}
 
 	public ngOnDestroy(): void {
@@ -36,7 +55,6 @@ export class PlayerPage implements OnInit, OnDestroy {
 
 	public openFile(file: Link, index: number): void {
 		this.currentFile = { file, index };
-		this.audioService.stop();
 		this.playStream(file.url);
 	}
 
@@ -63,6 +81,7 @@ export class PlayerPage implements OnInit, OnDestroy {
 
 		const index = this.currentFile.index - 1;
 		const file = this.disc.songs[index];
+		this.playerAction = "previous";
 		this.openFile(file, index);
 	}
 
@@ -73,6 +92,7 @@ export class PlayerPage implements OnInit, OnDestroy {
 
 		const index = this.currentFile.index + 1;
 		const file = this.disc.songs[index];
+		this.playerAction = "next";
 		this.openFile(file, index);
 	}
 
@@ -86,6 +106,20 @@ export class PlayerPage implements OnInit, OnDestroy {
 
 	public onSliderChangeEnd(event: any): void {
 		this.audioService.seekTo(event.target.value);
+	}
+
+	public styleSong(index: number): string[] {
+		const result: string[] = [];
+
+		if (this.currentFile.index == index) {
+			result.push("selected");
+		}
+
+		if (this.errorList.find(item => this.disc.songs[index].url == item)) {
+			result.push("error");
+		}
+
+		return result;
 	}
 
 	public goBack(): void {

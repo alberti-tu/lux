@@ -9,7 +9,7 @@
 			<div class="panel">
 				<p *ngIf="disc.name">{{ disc.name }}</p>
 				<p *ngIf="disc.year">{{ disc.year }}</p>
-				<div class="btn" (click)="open(disc)" translate>gallery.button</div>
+				<div class="btn" *ngIf="disc.songs && disc.songs.length > 0" (click)="open(disc)" translate>gallery.button</div>
 			</div>
 		</div>
 	</div>

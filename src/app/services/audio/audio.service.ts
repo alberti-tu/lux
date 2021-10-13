@@ -51,6 +51,7 @@ export class AudioService {
 	}
 
 	public playStream(url: string): Observable<Event> {
+		this.stop();
 		return this.streamObservable(url).pipe(takeUntil(this.stop$));
 	}
 

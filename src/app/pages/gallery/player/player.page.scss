@@ -140,6 +140,12 @@
 				background: #6e6e6e1a;
 			}
 
+			&.error {
+				pointer-events: none;
+				cursor: default;
+				opacity: 0.5;
+			}
+
 			p {
 				font-size: 1.25em;
 				line-height: 2em;
