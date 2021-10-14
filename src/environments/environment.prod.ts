@@ -67,7 +67,7 @@ export const environment: Configuration = {
 	],
 	pages: [ "home", "shows", "gallery", "about" ],
 	press: [ "Núvol", "Revista musical catalana"],
-	production: false,
+	production: true,
 	profiles: [
 		{
 			name: "Santi Mirón",
