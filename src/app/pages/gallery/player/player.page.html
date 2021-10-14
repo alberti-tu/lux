@@ -8,8 +8,8 @@
 			<input type="range" step="1" min="0" max="{{ state.duration }}" value="{{ state.currentTime }}" (input)="onSliderChangeEnd($event)">
 			
 			<div class="info">
-				<p>{{ state.readableCurrentTime }}</p>
-				<p>{{ state.readableDuration }}</p>
+				<p>{{ formatDate(state.currentTime) | date: 'mm:ss' }}</p>
+				<p>{{ formatDate(state.duration) | date: 'mm:ss' }}</p>
 			</div>
 		</div>
 

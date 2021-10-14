@@ -1,9 +1,14 @@
 import { Injectable } from "@angular/core";
 import { Observable, BehaviorSubject, Subject } from "rxjs";
 import { takeUntil } from "rxjs/operators";
-import * as moment from "moment";
 
-import { StreamState } from "../../models/interfaces";
+export interface StreamState {
+	playing: boolean;
+	canplay: boolean;
+	currentTime: number;
+	duration: number;
+	error: boolean;
+}
 
 @Injectable({ providedIn: 'root' })
 export class AudioService {
@@ -45,11 +50,6 @@ export class AudioService {
 		this.audioPlayer.currentTime = seconds;
 	}
 
-	public formatTime(time: number, format: string = "mm:ss"): string {
-		const momentTime = time * 1000;
-		return moment.utc(momentTime).format(format);
-	}
-
 	public playStream(url: string): Observable<Event> {
 		this.stop();
 		return this.streamObservable(url).pipe(takeUntil(this.stop$));
@@ -63,7 +63,6 @@ export class AudioService {
 		switch (event.type) {
 			case "canplay":
 				this.state.duration = this.audioPlayer.duration;
-				this.state.readableDuration = this.formatTime(this.state.duration);
 				this.state.canplay = true;
 				break;
 			case "playing":
@@ -74,7 +73,6 @@ export class AudioService {
 				break;
 			case "timeupdate":
 				this.state.currentTime = this.audioPlayer.currentTime;
-				this.state.readableCurrentTime = this.formatTime(this.state.currentTime);
 				break;
 			case "error":
 				this.state = this.initialState();
@@ -128,11 +126,9 @@ export class AudioService {
 	public initialState(): StreamState {
 		return {
 			playing: false,
-			readableCurrentTime: '00:00',
-			readableDuration: '00:00',
-			duration: 0,
-			currentTime: 0,
 			canplay: false,
+			currentTime: 0,
+			duration: 0,
 			error: false
 		};
 	}

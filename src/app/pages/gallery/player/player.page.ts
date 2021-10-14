@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Disc, Link, StreamState } from 'src/app/models/interfaces';
-import { AudioService } from 'src/app/services/audio/audio.service';
+import { Disc, Link } from 'src/app/models/interfaces';
+import { AudioService, StreamState } from 'src/app/services/audio/audio.service';
 
 @Component({
 	templateUrl: './player.page.html',
@@ -106,6 +106,10 @@ export class PlayerPage implements OnInit, OnDestroy {
 
 	public onSliderChangeEnd(event: any): void {
 		this.audioService.seekTo(event.target.value);
+	}
+
+	public formatDate(time: number): Date {
+		return new Date(time * 1000);
 	}
 
 	public styleSong(index: number): string[] {
