@@ -6,11 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { AlertService } from './services/alert/alert.service';
 import { TranslationService } from './services/translation/translation.service';
-
 import { ComponentsModule } from './components/components.module';
-
 import { AppComponent } from './app.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -43,7 +40,6 @@ const routes: Routes = [
 		})
 	],
 	providers: [
-		AlertService,
         TranslationService
 	]
 })
