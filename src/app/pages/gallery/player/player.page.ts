@@ -45,6 +45,11 @@ export class PlayerPage implements OnInit, OnDestroy {
 				this.playerAction == "previous" ? this.previous() : this.next();
 			}
 
+			if (state.currentTime > 0 && state.currentTime == state.duration) {
+				this.playerAction = "next";
+				this.next();
+			}
+
 			this.state = state;
 		});
 	}
