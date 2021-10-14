@@ -2,7 +2,7 @@
 	<img class="back focus" src="/assets/icons/back.svg" (click)="goBack()">
 
 	<div class="player" *ngIf="state">
-		<img class="disc-image" src="/assets/images/{{ disc.image }}">
+		<img class="disc-image shadow" src="/assets/images/{{ disc.image }}">
 
 		<div class="time-bar">
 			<input type="range" step="1" min="0" max="{{ state.duration }}" value="{{ state.currentTime }}" (input)="onSliderChangeEnd($event)">

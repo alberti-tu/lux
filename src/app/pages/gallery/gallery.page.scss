@@ -29,24 +29,26 @@
 			position: relative;
 			margin: 1em;
 
+			height: 256px;
+			width: 256px;
+
 			cursor: default;
 
 			img {
-				height: 256px;
-				width: 256px;
+				height: 100%;
+				width: 100%;
 			}
 
 			.panel {
-				transition: all 1000ms ease-in-out;
-
 				position: absolute;
+
 				bottom: 0px;
 				height: 0%;
 				width: 100%;
 
-				background: #999999cc;
+				display: none;
 
-				opacity: 0;
+				background: #999999cc;
 
 				p {
 					text-align: center;
@@ -58,6 +60,7 @@
 
 				.btn {
 					position: absolute;
+
 					bottom: 0px;
 					left: 50%;
 
@@ -73,7 +76,6 @@
 
 					text-transform: uppercase;
 
-					visibility: hidden;
 					cursor: pointer;
 
 					&:hover {
@@ -84,13 +86,8 @@
 
 			&:hover {
 				.panel {
+					display: block;
 					height: 100%;
-					opacity: 1;
-
-					.btn {
-						transition: all 1000ms;
-						visibility: visible;
-					}
 				}
 			}
 		}
