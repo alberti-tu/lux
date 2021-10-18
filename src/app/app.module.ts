@@ -34,7 +34,7 @@ const routes: Routes = [
 		BrowserAnimationsModule,
 		ComponentsModule,
 		HttpClientModule,
-		RouterModule.forRoot(routes),
+		RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
 		TranslateModule.forRoot({
 			loader: { provide: TranslateLoader, useFactory: HttpLoaderFactory, deps: [HttpClient] }
 		})
