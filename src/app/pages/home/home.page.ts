@@ -19,4 +19,8 @@ export class HomePage {
 		this.foundations = environment.foundations;
 		this.organizations = environment.organizations;
 	}
+
+	public openLink(url: string): void {
+		window.open(url);
+	}
 }

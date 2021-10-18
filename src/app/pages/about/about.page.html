@@ -18,8 +18,8 @@
 					<p class="name" *ngIf="user.name">{{ user.name }}</p>
 					<p class="role" *ngIf="user.role">{{ user.role }}</p>
 					<div class="links" *ngIf="user.links && user.links.length > 0">
-						<a href="{{ link.url }}" *ngFor="let link of user.links">
-							<img src="/assets/icons/{{ link.icon }}.svg">
+						<a href="{{ item.url }}" *ngFor="let item of user.links">
+							<img src="/assets/icons/{{ item.icon }}.svg" alt="{{ item.name }}">
 						</a>
 					</div>
 				</div>
@@ -53,9 +53,9 @@
 	<div *ngIf="press && press.length > 0">
 		<div class="title" translate>about.title.5</div>
 		<div class="group-row">
-			<div class="file shadow focus" *ngFor="let pdf of press" (click)="openFile(pdf + '.pdf')">
+			<div class="file shadow focus" *ngFor="let item of press" (click)="openFile(item + '.pdf')">
 				<img src="/assets/icons/news.svg">
-				<p>{{ pdf }}</p>
+				<p>{{ item }}</p>
 			</div>
 		</div>
 	</div>

@@ -5,8 +5,8 @@
 	</div>
 
 	<div class="social-networks" *ngIf="links && links.length > 0">
-		<a href="{{ link.url }}" *ngFor="let link of links">
-			<img src="/assets/icons/{{ link.icon }}.svg">
+		<a href="{{ item.url }}" *ngFor="let item of links">
+			<img src="/assets/icons/{{ item.icon }}.svg" alt="{{ item.name }}">
 		</a>
 	</div>
 </div>

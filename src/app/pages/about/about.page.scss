@@ -93,9 +93,13 @@
 					img {
 						transition: all 500ms;
 						border-radius: 0px;
+
+						color: white;
+
 						margin: 0.25em;
 						height: 32px;
 						width: 32px;
+
 						cursor: pointer;
 
 						&:hover {

@@ -4,6 +4,8 @@
 	<div class="parallax" style="background-image: url('/assets/images/home-1.jpg')"></div>
 
 	<div class="cover content" *ngIf="concerts || donations || (foundations && foundations.length > 0)">
+		<div class="title" translate>home.summary</div>
+
 		<div class="item-row" *ngIf="concerts || donations">
 			<div class="message focus" *ngIf="concerts">
 				<p class="number">{{ concerts }}</p>
@@ -17,8 +19,11 @@
 		</div>
 
 		<div class="item-row" *ngIf="foundations && foundations.length > 0">
-			<div class="card shadow focus" *ngFor="let link of foundations">
-				<a href="{{ link.url }}">{{ link.name }}</a>
+			<div class="card shadow focus" *ngFor="let item of foundations">
+				<p translate>home.support.main</p>
+				<img class="focus" src="/assets/images/{{ item.icon }}" alt="{{ item.name }}" (click)="openLink(item.url)">
+				<a href="{{ item.url }}">{{ item.name }}</a>
+				<p translate>home.support.others</p>
 			</div>
 		</div>
 	</div>
@@ -29,9 +34,9 @@
 		<div class="title" translate>home.colaborators</div>
 
 		<div class="item-row" *ngIf="organizations && organizations.length > 0">
-			<div class="image focus" *ngFor="let link of organizations">
-				<a href="{{ link.url }}">
-					<img src="/assets/images/{{ link.icon }}">
+			<div class="image focus" *ngFor="let item of organizations">
+				<a href="{{ item.url }}">
+					<img src="/assets/images/{{ item.icon }}" alt="{{ item.name }}">
 				</a>
 			</div>
 		</div>

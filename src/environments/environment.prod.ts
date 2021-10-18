@@ -34,7 +34,7 @@ export const environment: Configuration = {
 		}
 	],
 	foundations: [
-		{ name: "Arrels fundació", url: "https://www.arrelsfundacio.org" },
+		{ name: "Arrels fundació", icon: "arrels.jpg", url: "https://www.arrelsfundacio.org" },
 		{ name: "El somriure dels nens", url: "https://www.facebook.com/elsomriuredelsnens" },
 		{ name: "Banc d'aliments", url: "https://www.bancdelsaliments.org" },
 		{ name: "LIMFACAT", url: "https://sites.google.com/site/limfacatassociacio" },
@@ -49,21 +49,21 @@ export const environment: Configuration = {
 	],
 	key: "AIzaSyBy5_DiEN6mNM3jf8VKLZy1JhymEa47UQk",
 	links: [
-		{ icon: "facebook", url: "https://www.facebook.com/luxfundacio" },
-		{ icon: "instagram", url: "https://www.instagram.com/lux_fundacio" },
-		{ icon: "youtube", url: "https://www.youtube.com/channel/UCgjysEgq2bRrLgKF1psSyFg" }
+		{ name: "Facebook", icon: "facebook", url: "https://www.facebook.com/luxfundacio" },
+		{ name: "Instagram", icon: "instagram", url: "https://www.instagram.com/lux_fundacio" },
+		{ name: "YouTube", icon: "youtube", url: "https://www.youtube.com/channel/UCgjysEgq2bRrLgKF1psSyFg" }
 	],
 	organizations: [
-		{ icon: "hotel-subur.png", url: "https://www.hotelsubur.com" },
-		{ icon: "bcn-alberg.jpg", url: "https://www.catalunya.com/mare-de-deu-de-montserrat-17-13005-25" },
-		{ icon: "xarxa-evolució.png", url: "" },
-		{ icon: "xanas.jpg", url: "https://xanascat.gencat.cat" },
-		{ icon: "espai-ferrer.png", url: "https://www.ferrerguardia.org" },
-		{ icon: "vall-formosa.png", url: "https://vallformosa.com" },
-		{ icon: "generalitat-catalunya.jpg", url: "https://web.gencat.cat" },
-		{ icon: "bcn-ajuntament.jpg", url: "https://www.barcelona.cat" },
-		{ icon: "laCaixa.jpg", url: "https://www.caixabank.es" },
-		{ icon: "bcn-diputació.jpg", url: "https://www.diba.cat" }
+		{ name: "Hotel Subur", icon: "hotel-subur.png", url: "https://www.hotelsubur.com" },
+		{ name: "Alberg Barcelona", icon: "bcn-alberg.jpg", url: "https://www.catalunya.com/mare-de-deu-de-montserrat-17-13005-25" },
+		{ name: "Xarxa evolució", icon: "xarxa-evolució.png", url: "" },
+		{ name: "Xanas", icon: "xanas.jpg", url: "https://xanascat.gencat.cat" },
+		{ name: "Espai Ferrer i Guàrdia", icon: "espai-ferrer.png", url: "https://www.ferrerguardia.org" },
+		{ name: "Grup Vall Formosa", icon: "vall-formosa.png", url: "https://vallformosa.com" },
+		{ name: "Generalitat de Catalunya", icon: "generalitat-catalunya.jpg", url: "https://web.gencat.cat" },
+		{ name: "Ajuntament de Barcelona", icon: "bcn-ajuntament.jpg", url: "https://www.barcelona.cat" },
+		{ name: "La Caixa", icon: "laCaixa.jpg", url: "https://www.caixabank.es" },
+		{ name: "Diputació de Barcelona", icon: "bcn-diputació.jpg", url: "https://www.diba.cat" }
 	],
 	pages: [ "home", "shows", "gallery", "about" ],
 	press: [ "Núvol", "Revista musical catalana"],
@@ -74,7 +74,7 @@ export const environment: Configuration = {
 			role: "viola de gamba",
 			photo: "santi.jpg",
 			links: [
-				{ icon: "facebook", url: "https://www.facebook.com/profile.php?id=100008669134913" }
+				{ name: "Facebook", icon: "facebook", url: "https://www.facebook.com/profile.php?id=100008669134913" }
 			]
 		}
 	],

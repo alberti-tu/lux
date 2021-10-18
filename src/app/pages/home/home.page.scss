@@ -13,7 +13,10 @@
 		min-height: 100%;
 		max-width: 1024px;
 		margin: 0 auto;
-		padding-bottom: 2em;
+
+		&:last-child {
+			padding-bottom: 2em;
+		}
 	}
 
 	.content {
@@ -58,9 +61,55 @@
 			padding: 1.25em;
 			margin: 1em;
 
+			&:first-child {
+				display: flex;
+				flex-direction: column;
+
+				box-shadow: none!important;
+
+				width: 100%;
+				padding: 0;
+
+				img {
+					display: initial;
+					cursor: pointer;
+					margin: 0 auto;
+				}
+
+				a {
+					display: none;
+				}
+
+				p {
+					display: initial;
+				}
+
+				&.focus {
+					transform: none!important;
+					cursor: default!important;
+				}
+			}
+
+			img {
+				display: none;
+
+				height: auto;
+				width: 100%;
+				max-width: 512px;
+			}
+
 			a {
 				font-size: 1.25em;
 				margin: 0em;
+			}
+
+			p {
+				display: none;
+
+				font-size: 1.5em;
+				line-height: 1em;
+				text-transform: uppercase;
+				margin: 2em 0em;
 			}
 		}
 
