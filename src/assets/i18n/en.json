@@ -31,7 +31,8 @@
 	"home.title.1": "",
 	"home.title.2": "Organisations that have calloborated with Lux Fundació",
 	"show.empty": "There are currently no concerts announced, stay tuned to our social networks.",
-	"show.price": "Free",
+	"show.free": "Free",
+	"show.info": "More",
 	"show.ticket.offline": "Ticket office",
 	"show.ticket.online": "Online ticket"
 }

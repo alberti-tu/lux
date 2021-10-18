@@ -109,7 +109,14 @@
 				font-size: 1.5em;
 				line-height: 1em;
 				text-transform: uppercase;
-				margin: 2em 0em;
+				
+				&:first-child {
+					margin: 0em 0em 2em;
+				}
+
+				&:last-child {
+					margin: 4em 0em 0em;
+				}
 			}
 		}
 

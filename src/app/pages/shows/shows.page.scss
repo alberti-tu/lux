@@ -20,8 +20,9 @@
 				position: relative;
 
 				h1 {
-					margin: 1.2em 1.2em 0em;
+					margin: 1.2em 1.2em 0.5em;
 					font-size: 1.25em;
+					line-height: 1em;
 					color: black;
 				}
 
@@ -54,7 +55,7 @@
 					}
 	
 					p {
-						text-transform: capitalize;
+						text-transform: lowercase;
 						font-size: 1.25em;
 						text-align: right;
 						color: black;
