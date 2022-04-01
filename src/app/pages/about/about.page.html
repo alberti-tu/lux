@@ -7,18 +7,7 @@
 	<div class="section" *ngIf="profiles && profiles.length > 0">
 		<div class="title" translate>about.title.2</div>
 		<div class="group-row">
-			<div class="profile shadow" *ngFor="let user of profiles">
-				<img *ngIf="user.photo" src="/assets/images/{{ user.photo }}">
-				<div class="info">
-					<p class="name" *ngIf="user.name">{{ user.name }}</p>
-					<p class="role" *ngIf="user.role">{{ user.role }}</p>
-					<div class="links" *ngIf="user.links && user.links.length > 0">
-						<a href="{{ item.url }}" *ngFor="let item of user.links">
-							<img src="/assets/icons/{{ item.icon }}.svg" alt="{{ item.name }}">
-						</a>
-					</div>
-				</div>
-			</div>
+			<profile *ngFor="let user of profiles" [user]="user"></profile>
 		</div>
 	</div>
 
@@ -50,23 +39,8 @@
 		</div>
 	</div>
 
-	<div class="section" *ngIf="contact && (contact.email || contact.address || contact.phone)">
+	<div class="section" *ngIf="contact?.email || contact?.address || contact?.phone">
 		<div class="title" translate>about.title.6</div>
-		<div class="contact">
-			<a class="item" *ngIf="contact.email" href="mailto:{{ contact.email }}">
-				<img src="/assets/icons/email.svg">
-				<p>{{ contact.email }}</p>
-			</a>
-			<a class="item" *ngIf="contact.phone" href="tel:{{ contact.phone }}">
-				<img src="/assets/icons/phone.svg">
-				<p>{{ contact.phone }}</p>
-			</a>
-			<a class="item" *ngIf="contact.address">
-				<img src="/assets/icons/marker.svg">
-				<p>{{ contact.address }}</p>
-			</a>
-
-			<iframe class="item" *ngIf="contact.address" [src]="getMap(contact.address)" loading="lazy"></iframe>
-		</div>
+		<contact></contact>
 	</div>
 </div>

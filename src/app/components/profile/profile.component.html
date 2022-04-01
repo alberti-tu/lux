@@ -1,0 +1,12 @@
+<div class="profile-container shadow" *ngIf="user">
+	<img *ngIf="user.photo" src="/assets/images/{{ user.photo }}">
+	<div class="info">
+		<p class="name" *ngIf="user.name">{{ user.name }}</p>
+		<p class="role" *ngIf="user.role">{{ user.role }}</p>
+		<div class="links" *ngIf="user.links && user.links.length > 0">
+			<a href="{{ item.url }}" *ngFor="let item of user.links">
+				<img src="/assets/icons/{{ item.icon }}.svg" alt="{{ item.name }}">
+			</a>
+		</div>
+	</div>
+</div>

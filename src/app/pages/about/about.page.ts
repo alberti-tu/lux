@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Contact, Profile } from 'src/app/models/interfaces';
 import { environment } from 'src/environments/environment';
 
@@ -14,7 +13,7 @@ export class AboutPage {
 	public profiles: Profile[];
 	public reports: string[];
 
-	constructor(private sanitizer: DomSanitizer) {
+	constructor() {
 		this.contact = environment.contact;
 		this.press = environment.press;
 		this.profiles = environment.profiles;
@@ -25,8 +24,4 @@ export class AboutPage {
 		window.open('/assets/files/' + file);
 	}
 
-	public getMap(query: string): SafeResourceUrl {
-		const url = "https://www.google.com/maps/embed/v1/place?key=" + environment.key + "&q=" + query;
-		return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-	}
 }
