@@ -1,6 +1,6 @@
 .about-container {
 	.section {
-		margin: 2em 1em;
+		margin: 3em 1em;
 	}
 
 	.title {
@@ -15,16 +15,8 @@
 	}
 
 	.description {
-		p {
-			text-align: justify;
-			margin: 1em 2em;
-
-			&:first-child {
-				text-transform: uppercase;
-				font-weight: 500;
-				margin: 2em;
-			}
-		}
+		text-align: justify;
+		margin: 1em 2em;
 	}
 
 	.group-row {
