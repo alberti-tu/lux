@@ -2,11 +2,11 @@
 	height: 100%;
 	text-align: center;
 	max-width: unset;
+	padding: 5em 0em;
 
 	.main-image {
 		max-width: 20%;
 		height: auto;
-		margin-top: 1em;
 	}
 
 	.cover {
@@ -36,7 +36,7 @@
 		flex-direction: row;
 		justify-content: space-around;
 
-		margin: 2em;
+		margin: 2em 2em 4em;
 
 		.message {
 			margin: 1em;
