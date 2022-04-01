@@ -1,22 +1,38 @@
 {
 	"about": {
-		"description": {
-			"1": "La Lux Fundació es una iniciativa benéfica concebida por un grupo comprometido de entusiastas de la música. Tiene dos objetivos principales: 1. Apoyar a las entidades dedicadas a la obra benéfica. 2. Llevar la música antigua tocada de una manera históricamente auténtica a un público más amplio. Para lograr estos objetivos, la fundación cuenta con su propio conjunto permanente de instrumentos barrocos: Lux ensemble y Lux consort of viols.",
-			"2": "Amplia experiencia y muchos años de estudio avalan la calidad del grupo. Una característica del conjunto es su flexibilidad en cuanto al número de intérpretes para cada proyecto o concierto. Nuestra intención es poder ofrecer un repertorio muy amplio que incluya conciertos orquestales y de cámara o recitales de músicos individuales. Nuestro principio rector es crear eventos meticulosamente preparados que sean auténticos en términos históricos y musicológicos, utilizando los instrumentos para los que se crearon originalmente las piezas. De esta manera, nuestro objetivo es transportar a los oyentes a la magnífica Europa de los siglos XVII y XVIII, al mismo tiempo que hacemos una contribución a la caridad.",
-			"3": "Todos los beneficios de los eventos de Lux Fundació se destinan a organismos dedicados a iniciativas específicas para los más necesitados. El objetivo es actuar como una herramienta para que cualquier entidad sin ánimo de lucro financie su trabajo, ya sea la construcción de una escuela, la prestación de un servicio médico o cualquier otra iniciativa que valga la pena.",
-			"4": "Lux Fundació tiene su propia etiqueta: LUX RECORDS. En 2014 llegó el 1er disco: \"Suonate en trio per diversi strumenti di JS Bach\", y en 2015 llegó el 2do: \"Rezos y Danzas. De batallas, xácaras, pasacalles y otros tientos\"."
-		},
+		"description": "Lux Fundació es una iniciativa benéfica concebida por un grupo comprometido de entusiastas de la música. Tiene dos objetivos principales:\n\n1. Apoyar a las entidades dedicadas a la obra benéfica.\n\n2. Llevar la música antigua tocada de una manera históricamente auténtica a un público más amplio. Para lograr estos objetivos, la fundación cuenta con su propio conjunto permanente de instrumentos barrocos: Lux ensemble y Lux consort of viols.\n\nAmplia experiencia y muchos años de estudio avalan la calidad del grupo. Una característica del conjunto es su flexibilidad en cuanto al número de intérpretes para cada proyecto o concierto. Nuestra intención es poder ofrecer un repertorio muy amplio que incluya conciertos orquestales y de cámara o recitales de músicos individuales. Nuestro principio rector es crear eventos meticulosamente preparados que sean auténticos en términos históricos y musicológicos, utilizando los instrumentos para los que se crearon originalmente las piezas. De esta manera, nuestro objetivo es transportar a los oyentes a la magnífica Europa de los siglos XVII y XVIII, al mismo tiempo que hacemos una contribución a la caridad.\n\nTodos los beneficios de los eventos de Lux Fundació se destinan a organismos dedicados a iniciativas específicas para los más necesitados. El objetivo es actuar como una herramienta para que cualquier entidad sin ánimo de lucro financie su trabajo, ya sea la construcción de una escuela, la prestación de un servicio médico o cualquier otra iniciativa que valga la pena.\n\nLux Fundació tiene su propia etiqueta: LUX RECORDS. En 2014 llegó el 1er disco: \"Suonate en trio per diversi strumenti di JS Bach\", y en 2015 llegó el 2do: \"Rezos y Danzas. De batallas, xácaras, pasacalles y otros tientos\".",
 		"file": {
 			"report": "Informe financiero {{ year }}"
 		},
 		"project": {
-			"1": "Con el apoyo de Lux Fundació, la escuela \"Somriure dels Nens\" en Baleva (India) pudo comprar e instalar cuatro placas solares necesarias para proporcionar luz y hacer funcionar los ventiladores, reduciendo así las altas temperaturas en las aulas.",
-			"2": "Lux Fundació ha ayudado a la parroquia de la Sagrada Familia de Barcelona a recoger alimentos para las personas más desfavorecidas del barrio.",
-			"3": "En 2016, Lux trabajó con SAVE THE CHILDREN.",
-			"4": "Lux ha trabajado en diversas campañas con la Fundación Banc dels Aliments.",
-			"5": "Nuestra fundación ha trabajado con AECC Cataluña en el Día Internacional del Cáncer de Mama para recaudar fondos para la investigación.",
-			"6": "Lux fundació ha trabajado con Lymphacat para ayudar a proporcionar talleres sobre drenaje linfático y capacitar a enfermeras.",
-			"7": "Desde 2018 Lux colabora con ARRELS FUNDACIÓ de Barcelona"
+			"1": {
+				"title": "Proyecto 1",
+				"description": "Con el apoyo de Lux Fundació, la escuela \"Somriure dels Nens\" en Baleva (India) pudo comprar e instalar cuatro placas solares necesarias para proporcionar luz y hacer funcionar los ventiladores, reduciendo así las altas temperaturas en las aulas."
+			},
+			"2": {
+				"title": "Proyecto 2",
+				"description": "Lux Fundació ha ayudado a la parroquia de la Sagrada Familia de Barcelona a recoger alimentos para las personas más desfavorecidas del barrio."
+			},
+			"3": {
+				"title": "Proyecto 3",
+				"description": "En 2016, Lux trabajó con SAVE THE CHILDREN."
+			},
+			"4": {
+				"title": "Proyecto 4",
+				"description": "Lux ha trabajado en diversas campañas con la Fundación Banc dels Aliments."
+			},
+			"5": {
+				"title": "Proyecto 5",
+				"description": "Nuestra fundación ha trabajado con AECC Cataluña en el Día Internacional del Cáncer de Mama para recaudar fondos para la investigación."
+			},
+			"6": {
+				"title": "Proyecto 6",
+				"description": "Lux fundació ha trabajado con Lymphacat para ayudar a proporcionar talleres sobre drenaje linfático y capacitar a enfermeras."
+			},
+			"7": {
+				"title": "Proyecto 7",
+				"description": "Desde 2018 Lux colabora con ARRELS FUNDACIÓ de Barcelona"
+			}
 		},
 		"title": {
 			"1": "Quienes somos",

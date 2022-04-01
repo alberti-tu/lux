@@ -1,22 +1,38 @@
 {
 	"about": {
-		"description": {
-			"1": "The lux foundation is a charitable initiative conceived by a committed group of music enthusiasts. It has two main aims: 1. To support entities engaged in charitable work. 2. To bring ancient music played in a historically authentic manner to a wider public. In order to achieve these aims the foundation has its own permanent ensemble of baroque instruments: Lux ensemble & Lux consort of viols",
-			"2": "Wide experience and many years of study are an endorsement of the quality of the group. A feature of the ensemble is its flexibility in terms of the number of players for each project or concert. Our intention is to be able to offer a very wide repertoire which includes orchestral and chamber concerts or recitals by individual musicians. Our guiding principle is to create meticulously prepared events which are authentic in historic and musicological terms, using the instruments for which the pieces were originally created. In this way we aim to transport listeners to the magnificent Europe of the 17th and 18th centuries whilst also making a contribution to charity.",
-			"3": "All profits from the Lux Foundation events go to bodies engaged in specific initiatives for those most in need. The aim is to act as a tool for any non-profit body to finance their work, whether this is the construction of a school, the provision of a medical service, or any other worthwhile initiative.",
-			"4": "The Lux Foundation has its own label: LUX RECORDS. In 2014 came the 1st disc: \"Suonate en trio per diversi strumenti di JS Bach\", and 2015 came the 2nd: \"Rezos y Danzas. De batallas, xácaras, pasacalles y otros tientos\"."
-		},
+		"description": "Lux Fundació is a charity initiative conceived by a committed group of music enthusiasts. It has two main goals:\n\n1. Support entities dedicated to charitable work.\n\n2. Bringing early music played in a historically authentic way to a wider audience. To achieve these goals, the foundation has its own permanent set of baroque instruments: Lux ensemble and Lux ​​consort of viols.\n\nWide experience and many years of study guarantee the quality of the group. A characteristic of the ensemble is its flexibility in terms of the number of performers for each project or concert. Our intention is to be able to offer a very wide repertoire that includes orchestral and chamber concerts or recitals by individual musicians. Our guiding principle is to create meticulously prepared events that are historically and musicologically authentic, using the instruments for which the pieces were originally created. In this way, we aim to transport listeners to the magnificent Europe of the 17th and 18th centuries, while making a contribution to charity.\n\nAll profits from Lux Fundació events go to dedicated organizations to specific initiatives for those most in need. The objective is to act as a tool for any non-profit entity to finance its work, whether it is the construction of a school, the provision of a medical service or any other worthwhile initiative.\n\nLux Fundació has its own label: LUX RECORDS. In 2014 came the 1st album: \"Suonate en trio per diversi strumenti di JS Bach\", and in 2015 came the 2nd: \"Prayers and Dances. Of battles, xácaras, parades and other tientos\".",
 		"file": {
 			"report": "Informe financiero {{ year }}"
 		},
 		"project": {
-			"1": "With the support of the Lux Foundation, the \"Somriure dels Nens\" school in Baleva (India) was able to buy and set up four solar plaques needed to provide light and to make the fans work, thus reducing the high temperatures in the classrooms.",
-			"2": "The Lux Foundation has helped the Sagrada Familia parish in Barcelona to collect food for the most disadvantaged people in the neighbourhood.",
-			"3": "In 2016 Lux worked with SAVE THE CHILDREN.",
-			"4": "Lux has worked on various campaigns with the Banc dels Aliments Foundation.",
-			"5": "Our foundation has worked with AECC Catalonia on the International Breast Cancer Day to raise funds for research.",
-			"6": "The Lux Foundation has worked with Lymphacat to help provide workshops on lymphatic drainage and to train nurses.",
-			"7": "From 2018 Lux colaborates with ARRELS FUNDACIÓ from Barcelona"
+			"1": {
+				"title": "Project 1",
+				"description": "With the support of the Lux Foundation, the \"Somriure dels Nens\" school in Baleva (India) was able to buy and set up four solar plaques needed to provide light and to make the fans work, thus reducing the high temperatures in the classrooms."
+			},
+			"2": {
+				"title": "Project 2",
+				"description": "The Lux Foundation has helped the Sagrada Familia parish in Barcelona to collect food for the most disadvantaged people in the neighbourhood."
+			},
+			"3": {
+				"title": "Project 3",
+				"description": "In 2016 Lux worked with SAVE THE CHILDREN."
+			},
+			"4": {
+				"title": "Project 4",
+				"description": "Lux has worked on various campaigns with the Banc dels Aliments Foundation."
+			},
+			"5": {
+				"title": "Project 5",
+				"description": "Our foundation has worked with AECC Catalonia on the International Breast Cancer Day to raise funds for research."
+			},
+			"6": {
+				"title": "Project 6",
+				"description": "The Lux Foundation has worked with Lymphacat to help provide workshops on lymphatic drainage and to train nurses."
+			},
+			"7": {
+				"title": "Project 7",
+				"description": "From 2018 Lux colaborates with ARRELS FUNDACIÓ from Barcelona"
+			}
 		},
 		"title": {
 			"1": "About us",
@@ -44,7 +60,7 @@
 		"concerts": "concerts",
 		"donations": "in donations",
 		"support": {
-			"1": "Actualmente damos soporte a",
+			"1": "We currently support",
 			"2": "We also collaborate with"
 		},
 		"title": {

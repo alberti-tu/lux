@@ -1,15 +1,10 @@
 <div class="about-container">
-	<div>
+	<div class="section">
 		<div class="title" translate>about.title.1</div>
-		<div class="description">
-			<p translate>about.description.1</p>
-			<p translate>about.description.2</p>
-			<p translate>about.description.3</p>
-			<p translate>about.description.4</p>
-		</div>
+		<p class="description" translate>about.description</p>
 	</div>
 
-	<div *ngIf="profiles && profiles.length > 0">
+	<div class="section" *ngIf="profiles && profiles.length > 0">
 		<div class="title" translate>about.title.2</div>
 		<div class="group-row">
 			<div class="profile shadow" *ngFor="let user of profiles">
@@ -27,20 +22,15 @@
 		</div>
 	</div>
 
-	<div>
+	<div class="section">
 		<div class="title" translate>about.title.3</div>
-		<div class="timeline">
-			<p translate>about.project.1</p>
-			<p translate>about.project.2</p>
-			<p translate>about.project.3</p>
-			<p translate>about.project.4</p>
-			<p translate>about.project.5</p>
-			<p translate>about.project.6</p>
-			<p translate>about.project.7</p>
-		</div>
+		<accordion title="about.project.1.title" description="about.project.1.description"></accordion>
+		<accordion title="about.project.2.title" description="about.project.2.description"></accordion>
+		<accordion title="about.project.3.title" description="about.project.3.description"></accordion>
+		<accordion title="about.project.4.title" description="about.project.4.description"></accordion>
 	</div>
 
-	<div *ngIf="reports && reports.length > 0">
+	<div class="section" *ngIf="reports && reports.length > 0">
 		<div class="title" translate>about.title.4</div>
 		<div class="group-row">
 			<div class="file shadow focus" *ngFor="let year of reports" (click)="openFile('report-' + year + '.pdf')">
@@ -50,7 +40,7 @@
 		</div>
 	</div>
 
-	<div *ngIf="press && press.length > 0">
+	<div class="section" *ngIf="press && press.length > 0">
 		<div class="title" translate>about.title.5</div>
 		<div class="group-row">
 			<div class="file shadow focus" *ngFor="let item of press" (click)="openFile(item + '.pdf')">
@@ -60,7 +50,7 @@
 		</div>
 	</div>
 
-	<div *ngIf="contact && (contact.email || contact.address || contact.phone)">
+	<div class="section" *ngIf="contact && (contact.email || contact.address || contact.phone)">
 		<div class="title" translate>about.title.6</div>
 		<div class="contact">
 			<a class="item" *ngIf="contact.email" href="mailto:{{ contact.email }}">

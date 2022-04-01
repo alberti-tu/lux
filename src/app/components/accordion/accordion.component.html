@@ -1,0 +1,7 @@
+<div class="accordion-container shadow">
+	<div class="header">
+		<p translate>{{ title }}</p>
+		<img src="{{ showContent ? '/assets/icons/arrow-up.svg' : '/assets/icons/arrow-down.svg'}}" alt="" (click)="toggle()">
+	</div>
+	<p *ngIf="showContent" class="description" translate>{{ description }}</p>
+</div>
