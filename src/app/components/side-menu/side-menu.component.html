@@ -1,4 +1,4 @@
-<div class="side-menu-container" *ngIf="pages && pages.length > 0">
+<div class="side-menu-container" *ngIf="pages?.length > 0">
 	<img src="/assets/icons/menu.svg" (click)="open()">
 
 	<div class="menu-screen" [@menu]="isOpen ? 'open' : 'closed'" (click)="close()">

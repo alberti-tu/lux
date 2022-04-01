@@ -1,10 +1,10 @@
-<div class="footer-container" *ngIf="bank || links && links.length > 0">
+<div class="footer-container" *ngIf="bank || links?.length > 0">
 	<div *ngIf="bank">
 		<p translate>footer.text</p>
 		<p>{{ bank }}</p>
 	</div>
 
-	<div class="social-networks" *ngIf="links && links.length > 0">
+	<div class="social-networks" *ngIf="links?.length > 0">
 		<a href="{{ item.url }}" *ngFor="let item of links">
 			<img src="/assets/icons/{{ item.icon }}.svg" alt="{{ item.name }}">
 		</a>

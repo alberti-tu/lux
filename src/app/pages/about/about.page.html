@@ -19,7 +19,7 @@
 		<accordion title="about.project.4.title" description="about.project.4.description"></accordion>
 	</div>
 
-	<div class="section" *ngIf="reports && reports.length > 0">
+	<div class="section" *ngIf="reports?.length > 0">
 		<div class="title" translate>about.title.4</div>
 		<div class="group-row">
 			<div class="file shadow focus" *ngFor="let year of reports" (click)="openFile('report-' + year + '.pdf')">
@@ -29,7 +29,7 @@
 		</div>
 	</div>
 
-	<div class="section" *ngIf="press && press.length > 0">
+	<div class="section" *ngIf="press?.length > 0">
 		<div class="title" translate>about.title.5</div>
 		<div class="group-row">
 			<div class="file shadow focus" *ngFor="let item of press" (click)="openFile(item + '.pdf')">
