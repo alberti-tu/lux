@@ -1,4 +1,16 @@
 .gallery-container {
+	.section {
+		margin: 3em 1em;
+
+		&:first-child {
+			margin: 2em 1em;
+		}
+
+		&:last-child {
+			margin: 2em 1em;
+		}
+	}
+
 	.title {
 		text-transform: uppercase;
 		border-bottom: solid 1px black;
@@ -7,7 +19,7 @@
 		font-weight: 500;
 		line-height: 1em;
 		padding: 0.5em 2em;
-		margin: 2em 1em;
+		margin-bottom: 1em;
 	}
 
 	.discography {

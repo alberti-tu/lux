@@ -19,7 +19,7 @@ const routes: Routes = [
 	{ path: 'gallery', loadChildren: () => import('./pages/gallery/gallery.module').then(m => m.GalleryModule) },
 	{ path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
 	{ path: 'shows', loadChildren: () => import('./pages/shows/shows.module').then(m => m.ShowsModule) },
-	{ path: '**', redirectTo: 'home', pathMatch: 'full' }
+	{ path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({

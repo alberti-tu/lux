@@ -1,13 +1,15 @@
 <div class="page gallery-container">
-	<div class="title" translate>gallery.title</div>
-	<div class="discography" *ngIf="discography?.length > 0">
-		<div class="disc shadow" *ngFor="let disc of discography; let i = index">
-			<img src="/assets/images/{{ disc.image }}">
+	<div class="section">
+		<div class="title" translate>gallery.title</div>
+		<div class="discography" *ngIf="discography?.length > 0">
+			<div class="disc shadow" *ngFor="let disc of discography; let i = index">
+				<img src="/assets/images/{{ disc.image }}">
 
-			<div class="panel" (click)="discIndex = i">
-				<p *ngIf="disc.name">{{ disc.name }}</p>
-				<p *ngIf="disc.year">{{ disc.year }}</p>
-				<div class="btn" *ngIf="disc?.songs?.length > 0" (click)="open(disc, i)" translate>gallery.button</div>
+				<div class="panel" (click)="discIndex = i">
+					<p>{{ disc.name }}</p>
+					<p>{{ disc.year }}</p>
+					<div class="btn" *ngIf="disc?.songs?.length > 0" (click)="open(disc, i)" translate>gallery.button</div>
+				</div>
 			</div>
 		</div>
 	</div>
