@@ -34,7 +34,7 @@ export class PlayerPage implements OnInit, OnDestroy {
 			if (state.error) {
 				this.errorList.push(this.currentFile.file.url);
 
-				if(this.isFirstPlaying()) {
+				if (this.isFirstPlaying()) {
 					this.playerAction = "next";
 				}
 

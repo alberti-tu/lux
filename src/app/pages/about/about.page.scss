@@ -1,6 +1,14 @@
 .about-container {
 	.section {
 		margin: 3em 1em;
+
+		&:first-child {
+			margin: 2em 1em;
+		}
+
+		&:last-child {
+			margin: 2em 1em;
+		}
 	}
 
 	.title {
@@ -31,14 +39,14 @@
 			border-radius: 16px;
 			margin: 2em 1em;
 			padding: 1em;
-	
+
 			width: 128px;
-			
+
 			img {
 				height: 64px;
 				width: 64px;
 			}
-	
+
 			p {
 				text-transform: uppercase;
 				margin: 1em 0em 0em;

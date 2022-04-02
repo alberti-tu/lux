@@ -32,7 +32,7 @@ export class AudioService {
 	private stateChange: BehaviorSubject<StreamState> = new BehaviorSubject(this.state);
 	private stop$ = new Subject();
 
-	constructor() {	}
+	constructor() { }
 
 	public play(): void {
 		this.audioPlayer.play();
@@ -96,27 +96,27 @@ export class AudioService {
 			};
 
 			this.addEvents(this.audioPlayer, this.audioEvents, handler);
-			
+
 			return () => {
 				// Stop Playing
 				this.audioPlayer.pause();
 				this.audioPlayer.currentTime = 0;
-				
+
 				// remove event listeners
 				this.removeEvents(this.audioPlayer, this.audioEvents, handler);
-				
+
 				// reset state
 				this.state = this.initialState();
 			};
 		});
 	}
-  
+
 	private addEvents(obj: any, events: any, handler: any): any {
 		events.forEach((event: any) => {
 			obj.addEventListener(event, handler);
 		});
 	}
-  
+
 	private removeEvents(obj: any, events: any, handler: any): any {
 		events.forEach((event: any) => {
 			obj.removeEventListener(event, handler);

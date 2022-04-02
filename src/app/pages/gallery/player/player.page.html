@@ -6,7 +6,7 @@
 
 		<div class="time-bar">
 			<input type="range" step="1" min="0" max="{{ state.duration }}" value="{{ state.currentTime }}" (input)="onSliderChangeEnd($event)">
-			
+
 			<div class="info">
 				<p>{{ formatDate(state.currentTime) | date: 'mm:ss' }}</p>
 				<p>{{ formatDate(state.duration) | date: 'mm:ss' }}</p>
@@ -21,11 +21,11 @@
 			<div class="btn shadow main" *ngIf="!state.playing" (click)="play()">
 				<img src="/assets/icons/play.svg">
 			</div>
-			
+
 			<div class="btn shadow main" *ngIf="state.playing" (click)="pause()">
 				<img src="/assets/icons/pause.svg">
-			</div >
-			
+			</div>
+
 			<div class="btn shadow" ngClass="{{ isLastPlaying() ? 'disabled' : '' }}" (click)="next()">
 				<img src="/assets/icons/next.svg">
 			</div>

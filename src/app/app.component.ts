@@ -8,6 +8,6 @@ import { TranslationService } from './services/translation/translation.service';
 })
 export class AppComponent {
 
-	constructor(private translation: TranslationService) {	}
+	constructor(private translation: TranslationService) { }
 
 }

@@ -11,7 +11,7 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
+	return new TranslateHttpLoader(http);
 }
 
 const routes: Routes = [
@@ -40,7 +40,7 @@ const routes: Routes = [
 		})
 	],
 	providers: [
-        TranslationService
+		TranslationService
 	]
 })
 export class AppModule { }
