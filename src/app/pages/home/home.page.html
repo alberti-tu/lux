@@ -21,7 +21,7 @@
 		<div class="item-row" *ngIf="foundations?.length > 0">
 			<div class="card shadow focus" *ngFor="let item of foundations">
 				<p translate>home.support.1</p>
-				<img class="focus" src="/assets/images/{{ item.icon }}" alt="{{ item.name }}" (click)="openLink(item.url)">
+				<img *ngIf="item.icon" src="/assets/images/{{ item.icon }}" alt="{{ item.name }}" class="focus" (click)="openLink(item.url)">
 				<a href="{{ item.url }}">{{ item.name }}</a>
 				<p translate>home.support.2</p>
 			</div>
