@@ -4,24 +4,24 @@
 	padding: 1em 2em;
 	margin: 2em auto;
 
-	width: max-content;
-	min-width: 25vw;
+	.content {
+		padding: 1em 0em;
+
+		.item {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
 	
-	.item {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-
-		align-items: center;
-
-		img {
-			height: 32px;
-			width: 32px;
-			margin: 1em;
-		}
-
-		p {
-			margin: 1em;
+			align-items: center;
+	
+			img {
+				height: 20px;
+				width: 20px;
+			}
+	
+			p {
+				margin: 1em;
+			}
 		}
 	}
 
