@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Disc } from 'src/app/models/interfaces';
-import { environment } from 'src/environments/environment';
+import { configuration } from 'src/configurations/configuration';
 
 @Component({
 	templateUrl: './gallery.page.html',
@@ -13,7 +13,7 @@ export class GalleryPage {
 	public discIndex: number;
 
 	constructor(private router: Router) {
-		this.discography = environment.discography.sort((a, b) => (a.year && b.year ? a.year - b.year : 0));
+		this.discography = configuration.discography.sort((a, b) => (a.year && b.year ? a.year - b.year : 0));
 	}
 
 	public open(item: Disc, index: number): void {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Show } from 'src/app/models/interfaces';
+import { configuration } from 'src/configurations/configuration';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -13,8 +14,8 @@ export class ShowsPage {
 	public mapList: boolean[] = [];
 
 	constructor(private sanitizer: DomSanitizer) {
-		if (environment.shows) {
-			this.shows = environment.shows
+		if (configuration.shows) {
+			this.shows = configuration.shows
 				.filter(item => (item.date && new Date(item.date) > new Date()))
 				.sort((a, b) => (a.date && b.date ? new Date(a.date).getTime() - new Date(b.date).getTime() : 0));
 			this.mapList = new Array(this.shows.length).fill(false);

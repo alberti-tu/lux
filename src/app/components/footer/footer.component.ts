@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Link } from 'src/app/models/interfaces';
-import { environment } from 'src/environments/environment';
+import { configuration } from 'src/configurations/configuration';
 
 @Component({
 	selector: 'footer',
@@ -13,8 +13,8 @@ export class FooterComponent {
 	public links: Link[];
 
 	constructor() {
-		this.bank = environment.bank;
-		this.links = environment.links;
+		this.bank = configuration.bank;
+		this.links = configuration.links;
 	}
 
 }

@@ -1,3 +1,8 @@
+export interface Environment {
+	key: string;
+	production: boolean;
+}
+
 export interface Configuration {
 	bank?: string;
 	concerts?: number;
@@ -5,12 +10,10 @@ export interface Configuration {
 	donations?: string;
 	discography?: Disc[];
 	foundations?: Link[];
-	key?: string;
 	links?: Link[];
 	organizations?: Link[];
 	pages?: string[];
 	press?: string[];
-	production?: boolean;
 	profiles?: Profile[];
 	reports?: string[];
 	shows?: Show[];

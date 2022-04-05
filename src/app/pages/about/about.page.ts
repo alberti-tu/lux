@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Contact, Profile } from 'src/app/models/interfaces';
-import { environment } from 'src/environments/environment';
+import { configuration } from 'src/configurations/configuration';
 
 @Component({
 	templateUrl: './about.page.html',
@@ -14,10 +14,10 @@ export class AboutPage {
 	public reports: string[];
 
 	constructor() {
-		this.contact = environment.contact;
-		this.press = environment.press;
-		this.profiles = environment.profiles;
-		this.reports = environment.reports;
+		this.contact = configuration.contact;
+		this.press = configuration.press;
+		this.profiles = configuration.profiles;
+		this.reports = configuration.reports;
 	}
 
 	public openFile(file: string): void {

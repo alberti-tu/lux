@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Link } from 'src/app/models/interfaces';
-import { environment } from 'src/environments/environment';
+import { configuration } from 'src/configurations/configuration';
 
 @Component({
 	templateUrl: './home.page.html',
@@ -14,10 +14,10 @@ export class HomePage {
 	public organizations: Link[];
 
 	constructor() {
-		this.concerts = environment.concerts;
-		this.donations = environment.donations;
-		this.foundations = environment.foundations;
-		this.organizations = environment.organizations;
+		this.concerts = configuration.concerts;
+		this.donations = configuration.donations;
+		this.foundations = configuration.foundations;
+		this.organizations = configuration.organizations;
 	}
 
 	public openLink(url: string): void {

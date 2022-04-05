@@ -1,6 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { configuration } from 'src/configurations/configuration';
 
 @Component({
 	selector: 'side-menu',
@@ -17,12 +17,11 @@ import { environment } from 'src/environments/environment';
 export class SideMenuComponent {
 
 	public pages: string[];
+	public isOpen: boolean;
 
 	constructor() {
-		this.pages = environment.pages;
+		this.pages = configuration.pages;
 	}
-
-	public isOpen: boolean = false;
 
 	public open(): void {
 		this.isOpen = true;

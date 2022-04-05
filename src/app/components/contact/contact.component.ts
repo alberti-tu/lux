@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Contact } from 'src/app/models/interfaces';
+import { configuration } from 'src/configurations/configuration';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -13,7 +14,7 @@ export class ContactComponent {
 	public contact: Contact;
 
 	constructor(private sanitizer: DomSanitizer) {
-		this.contact = environment.contact;
+		this.contact = configuration.contact;
 	}
 
 	public getMap(query: string): SafeResourceUrl {

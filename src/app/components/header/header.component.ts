@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Link } from 'src/app/models/interfaces';
-import { environment } from 'src/environments/environment';
+import { configuration } from 'src/configurations/configuration';
 
 @Component({
 	selector: 'header',
@@ -13,8 +13,8 @@ export class HeaderComponent {
 	public pages: string[];
 
 	constructor() {
-		this.links = environment.links;
-		this.pages = environment.pages;
+		this.links = configuration.links;
+		this.pages = configuration.pages;
 	}
 
 }
