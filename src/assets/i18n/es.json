@@ -73,8 +73,10 @@
         "free": "Gratis",
         "info": "Más",
         "ticket": {
-            "offline": "Entrada en taquilla",
-            "online": "Entrada online"
+            "booked": "Entrada gratuita con limitación de aforo",
+            "free": "Entrada gratuita",
+            "offline": "Comprar entrada en taquilla",
+            "online": "Comprar entrada online"
         }
     }
 }

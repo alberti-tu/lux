@@ -4,20 +4,31 @@
 			<div class="info">
 				<h1 *ngIf="show.name">{{ show.name }}</h1>
 				<p *ngIf="show.address">{{ show.address }}</p>
-				<p *ngIf="show.date">{{ show.date | date: 'EEEE, d MMMM yyyy | H:mm' }}</p>	
-				<p *ngIf="show.price && show.url" translate>show.ticket.online</p>
-				<p *ngIf="show.price && !show.url" translate>show.ticket.offline</p>
+				<p *ngIf="show.date">{{ show.date | date: 'EEEE, d MMMM yyyy | H:mm' }}</p>
+				<p *ngIf="show.price" translate>{{ show.url ? 'show.ticket.online' : 'show.ticket.offline' }}</p>
+				<p *ngIf="!show.price" translate>{{ show.url ? 'show.ticket.booked' : 'show.ticket.free' }}</p>
 
-				<div *ngIf="show.price" class="ticket shadow {{ show.url ? 'click' : '' }}" (click)="openLink(show.url)">
-					<p *ngIf="show.price">{{ show.price }}</p>
-					<img src="/assets/icons/ticket.svg">
+				<a *ngIf="show.url" href="{{ show.url }}">
+					<div *ngIf="show.price" class="ticket shadow click">
+						<p *ngIf="show.price">{{ show.price }}</p>
+						<img src="/assets/icons/ticket.svg">
+					</div>
+					<div *ngIf="!show.price" class="ticket shadow click">
+						<p translate>show.info</p>
+					</div>
+				</a>
+
+				<div *ngIf="!show.url">
+					<div *ngIf="show.price" class="ticket shadow">
+						<p *ngIf="show.price">{{ show.price }}</p>
+						<img src="/assets/icons/ticket.svg">
+					</div>
+					<div *ngIf="!show.price" class="ticket shadow">
+						<p translate>show.free</p>
+					</div>
 				</div>
 
-				<div *ngIf="!show.price" class="ticket shadow {{ show.url ? 'click' : '' }}" (click)="openLink(show.url)">
-					<p *ngIf="show.url" translate>show.info</p>
-					<p *ngIf="!show.url"translate>show.free</p>
-				</div>
-
+				<div *ngIf="!show.url"></div>
 				<img class="bubble" src="/assets/icons/arrow.svg" (click)="toggleMap(show)">
 			</div>
 

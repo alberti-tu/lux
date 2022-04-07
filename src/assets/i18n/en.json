@@ -73,6 +73,8 @@
         "free": "Free",
         "info": "More",
         "ticket": {
+            "booked": "Free ticket with limited capacity",
+            "free": "Free ticket",
             "offline": "Ticket office",
             "online": "Online ticket"
         }
