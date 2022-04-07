@@ -34,11 +34,9 @@
 		<div class="title" translate>home.title.2</div>
 
 		<div class="item-row">
-			<div class="image focus" *ngFor="let item of organizations">
-				<a href="{{ item.url }}">
-					<img src="/assets/images/{{ item.icon }}" alt="{{ item.name }}">
-				</a>
-			</div>
+			<a class="image focus" *ngFor="let item of organizations" href="{{ item.url }}">
+				<img src="/assets/images/{{ item.icon }}" alt="{{ item.name }}">
+			</a>
 		</div>
 	</div>
 </div>
