@@ -20,8 +20,4 @@ export class AboutPage {
 		this.reports = configuration.reports;
 	}
 
-	public openFile(file: string): void {
-		window.open('/assets/files/' + file);
-	}
-
 }

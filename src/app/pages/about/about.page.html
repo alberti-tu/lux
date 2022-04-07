@@ -22,20 +22,20 @@
 	<div class="section" *ngIf="reports?.length > 0">
 		<div class="title" translate>about.title.4</div>
 		<div class="group-row">
-			<div class="file shadow focus" *ngFor="let year of reports" (click)="openFile('report-' + year + '.pdf')">
+			<a class="file shadow focus" *ngFor="let year of reports" href="/assets/files/report-{{ year }}.pdf">
 				<img src="/assets/icons/file.svg">
 				<p>{{ "about.file.report" | translate: { year: year } }}</p>
-			</div>
+			</a>
 		</div>
 	</div>
 
 	<div class="section" *ngIf="press?.length > 0">
 		<div class="title" translate>about.title.5</div>
 		<div class="group-row">
-			<div class="file shadow focus" *ngFor="let item of press" (click)="openFile(item + '.pdf')">
+			<a class="file shadow focus" *ngFor="let file of press" href="/assets/files/report-{{ file }}.pdf">
 				<img src="/assets/icons/news.svg">
-				<p>{{ item }}</p>
-			</div>
+				<p>{{ file }}</p>
+			</a>
 		</div>
 	</div>
 
