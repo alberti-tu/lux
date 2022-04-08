@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Contact, Profile } from 'src/app/models/interfaces';
+import { Contact, Link, Profile } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/configuration';
 
 @Component({
@@ -9,9 +9,9 @@ import { configuration } from 'src/configurations/configuration';
 export class AboutPage {
 
 	public contact: Contact;
-	public press: string[];
+	public press: Link[];
 	public profiles: Profile[];
-	public reports: string[];
+	public reports: Link[];
 
 	constructor() {
 		this.contact = configuration.contact;

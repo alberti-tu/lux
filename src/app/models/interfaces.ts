@@ -13,9 +13,9 @@ export interface Configuration {
 	links?: Link[];
 	organizations?: Link[];
 	pages?: string[];
-	press?: string[];
+	press?: Link[];
 	profiles?: Profile[];
-	reports?: string[];
+	reports?: Link[];
 	shows?: Show[];
 }
 

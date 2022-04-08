@@ -65,7 +65,10 @@ export const configuration: Configuration = {
 		{ name: "Diputació de Barcelona", icon: "bcn-diputació.jpg", url: "https://www.diba.cat" }
 	],
 	pages: [ "home", "shows", "gallery", "about" ],
-	press: [ "Núvol", "Revista musical catalana"],
+	press: [
+		{ name: "Núvol", url: "núvol.pdf" },
+		{ name: "Revista musical catalana", url: "revista-musical-catalana.pdf" },
+	],
 	profiles: [
 		{
 			name: "Santi Mirón",
@@ -76,7 +79,12 @@ export const configuration: Configuration = {
 			]
 		}
 	],
-	reports: [ "2018", "2017", "2016", "2015" ],
+	reports: [
+		{ name: "2018", url: "report-2018.pdf" },
+		{ name: "2017", url: "report-2017.pdf" },
+		{ name: "2016", url: "report-2016.pdf" },
+		{ name: "2015", url: "report-2015.pdf" },
+	],
 	shows: [
 		{ name: "Test 1", address: "Les Rambles 4, Barcelona", date: "2022/11/1 16:00", price: "5€", url: "https://www.google.es" },
 		{ name: "Test 2", address: "Plaza Catalunya, Barcelona", date: "2022/12/8 21:00", price: "15€", url: undefined },
