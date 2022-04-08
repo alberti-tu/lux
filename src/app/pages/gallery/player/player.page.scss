@@ -15,8 +15,8 @@
 
 		.time-bar {
 			max-width: 512px;
-			width: 80%;
 			margin: 1em auto;
+			width: 80%;
 
 			input {
 				$color: #6d6d6d;
@@ -30,9 +30,9 @@
 				border-radius: 10px;
 				align-self: center;
 				overflow: hidden;
-				cursor: pointer;
-
 				opacity: 0.7;
+				
+				cursor: pointer;
 
 				&:hover {
 					opacity: 1;
@@ -55,8 +55,6 @@
 
 			.info {
 				display: flex;
-				flex-direction: row;
-				flex-wrap: nowrap;
 
 				justify-content: space-between;
 
@@ -112,10 +110,10 @@
 		margin: 2em;
 
 		.single {
-			transition: all 500ms;
 			display: flex;
-			flex-direction: row;
 			flex-wrap: wrap;
+
+			transition: all 500ms;
 
 			justify-content: space-between;
 
@@ -138,14 +136,13 @@
 
 			&.error {
 				pointer-events: none;
-				cursor: default;
 				opacity: 0.5;
+				cursor: default;
 			}
 
 			p {
 				font-size: 1.25em;
 				line-height: 2em;
-				margin: 0;
 			}
 		}
 	}
