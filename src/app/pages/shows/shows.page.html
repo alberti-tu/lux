@@ -9,23 +9,23 @@
 				<p *ngIf="!show.price" translate>{{ show.url ? 'show.ticket.booked' : 'show.ticket.free' }}</p>
 
 				<a *ngIf="show.url" href="{{ show.url }}">
-					<div *ngIf="show.price" class="ticket shadow click">
+					<button *ngIf="show.price">
 						<p *ngIf="show.price">{{ show.price }}</p>
 						<img src="/assets/icons/ticket.svg">
-					</div>
-					<div *ngIf="!show.price" class="ticket shadow click">
+					</button>
+					<button *ngIf="!show.price">
 						<p translate>show.info</p>
-					</div>
+					</button>
 				</a>
 
 				<div *ngIf="!show.url">
-					<div *ngIf="show.price" class="ticket shadow">
+					<button *ngIf="show.price" disabled>
 						<p *ngIf="show.price">{{ show.price }}</p>
 						<img src="/assets/icons/ticket.svg">
-					</div>
-					<div *ngIf="!show.price" class="ticket shadow">
+					</button>
+					<button *ngIf="!show.price" disabled>
 						<p translate>show.free</p>
-					</div>
+					</button>
 				</div>
 
 				<div *ngIf="!show.url"></div>
