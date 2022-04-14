@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ILink } from 'src/app/models/interfaces';
-import { configuration } from 'src/configurations/configuration';
+import { configuration } from 'src/configurations/global.config';
 
 @Component({
 	selector: 'header',
@@ -10,7 +10,7 @@ import { configuration } from 'src/configurations/configuration';
 export class HeaderComponent {
 
 	public links: ILink[];
-	public pages: string[];
+	public pages: ILink[];
 
 	constructor() {
 		this.links = configuration.links;

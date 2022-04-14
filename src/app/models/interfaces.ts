@@ -58,3 +58,13 @@ export interface IShow {
 	price?: string;
 	url?: string;
 }
+
+
+/// experimental
+
+export interface IGlobal {
+	bank?: string;
+	footer?: string;
+	links?: ILink[];
+	pages?: ILink[];
+}
