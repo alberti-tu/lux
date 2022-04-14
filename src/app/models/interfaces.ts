@@ -77,5 +77,17 @@ export interface IConfigurationHome {
 }
 
 export interface IConfigurationShows {
-	shows: IShow[];
+	shows?: IShow[];
+}
+
+export interface IConfigurationGallery {
+	discography?: IDisc[];
+}
+
+export interface IConfigurationAbout {
+	contact?: IContact;
+	press?: ILink[];
+	profiles?: IProfile[];
+	projects?: IAccordion[];
+	reports?: ILink[];
 }

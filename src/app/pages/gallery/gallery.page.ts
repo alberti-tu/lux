@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { IDisc } from 'src/app/models/interfaces';
-import { configuration } from 'src/configurations/configuration';
+import { configuration } from 'src/configurations/gallery.config';
 
 @Component({
 	templateUrl: './gallery.page.html',
