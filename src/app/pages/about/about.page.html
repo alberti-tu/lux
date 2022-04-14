@@ -4,19 +4,16 @@
 		<p class="description" translate>about.description</p>
 	</div>
 
-	<div class="section" *ngIf="profiles && profiles.length > 0">
+	<div class="section" *ngIf="profiles?.length > 0">
 		<div class="title" translate>about.title.2</div>
 		<div class="group-row">
 			<profile *ngFor="let user of profiles" [user]="user"></profile>
 		</div>
 	</div>
 
-	<div class="section">
+	<div class="section" *ngIf="projects?.length > 0">
 		<div class="title" translate>about.title.3</div>
-		<accordion title="about.project.1.title" description="about.project.1.description"></accordion>
-		<accordion title="about.project.2.title" description="about.project.2.description"></accordion>
-		<accordion title="about.project.3.title" description="about.project.3.description"></accordion>
-		<accordion title="about.project.4.title" description="about.project.4.description"></accordion>
+		<accordion *ngFor="let item of projects" title="{{ item.title }}" description="{{ item.description }}"></accordion>
 	</div>
 
 	<div class="section" *ngIf="reports?.length > 0">

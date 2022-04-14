@@ -79,6 +79,12 @@ export const configuration: Configuration = {
 			]
 		}
 	],
+	projects: [
+		{ title: "about.project.1.title", description: "about.project.1.description"},
+		{ title: "about.project.2.title", description: "about.project.2.description"},
+		{ title: "about.project.3.title", description: "about.project.3.description"},
+		{ title: "about.project.4.title", description: "about.project.4.description"},
+	],
 	reports: [
 		{ name: "2018", url: "report-2018.pdf" },
 		{ name: "2017", url: "report-2017.pdf" },

@@ -15,8 +15,14 @@ export interface Configuration {
 	pages?: string[];
 	press?: Link[];
 	profiles?: Profile[];
+	projects?: Accordion[];
 	reports?: Link[];
 	shows?: Show[];
+}
+
+export interface Accordion {
+	title?: string;
+	description?: string;
 }
 
 export interface Contact {
