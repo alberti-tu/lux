@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Link } from 'src/app/models/interfaces';
+import { ILink } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/configuration';
 
 @Component({
@@ -10,7 +10,7 @@ import { configuration } from 'src/configurations/configuration';
 export class FooterComponent {
 
 	public bank: string;
-	public links: Link[];
+	public links: ILink[];
 
 	constructor() {
 		this.bank = configuration.bank;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Contact } from 'src/app/models/interfaces';
+import { IContact } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/configuration';
 import { environment } from 'src/environments/environment';
 
@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ContactComponent {
 
-	public contact: Contact;
+	public contact: IContact;
 
 	constructor(private sanitizer: DomSanitizer) {
 		this.contact = configuration.contact;

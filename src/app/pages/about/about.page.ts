@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Accordion, Contact, Link, Profile } from 'src/app/models/interfaces';
+import { IAccordion, IContact, ILink, IProfile } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/configuration';
 
 @Component({
@@ -8,11 +8,11 @@ import { configuration } from 'src/configurations/configuration';
 })
 export class AboutPage {
 
-	public contact: Contact;
-	public press: Link[];
-	public profiles: Profile[];
-	public projects: Accordion[];
-	public reports: Link[];
+	public contact: IContact;
+	public press: ILink[];
+	public profiles: IProfile[];
+	public projects: IAccordion[];
+	public reports: ILink[];
 
 	constructor() {
 		this.contact = configuration.contact;

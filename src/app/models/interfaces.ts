@@ -1,57 +1,57 @@
-export interface Environment {
+export interface IEnvironment {
 	key: string;
 	production: boolean;
 }
 
-export interface Configuration {
+export interface IConfiguration {
 	bank?: string;
 	concerts?: number;
-	contact?: Contact;
+	contact?: IContact;
 	donations?: string;
-	discography?: Disc[];
-	foundations?: Link[];
-	links?: Link[];
-	organizations?: Link[];
+	discography?: IDisc[];
+	foundations?: ILink[];
+	links?: ILink[];
+	organizations?: ILink[];
 	pages?: string[];
-	press?: Link[];
-	profiles?: Profile[];
-	projects?: Accordion[];
-	reports?: Link[];
-	shows?: Show[];
+	press?: ILink[];
+	profiles?: IProfile[];
+	projects?: IAccordion[];
+	reports?: ILink[];
+	shows?: IShow[];
 }
 
-export interface Accordion {
+export interface IAccordion {
 	title?: string;
 	description?: string;
 }
 
-export interface Contact {
+export interface IContact {
 	address?: string;
 	email?: string;
 	phone?: string;
 }
 
-export interface Disc {
+export interface IDisc {
 	name?: string;
 	image?: string;
 	year?: number;
-	songs?: Link[];
+	songs?: ILink[];
 }
 
-export interface Profile {
+export interface IProfile {
 	name?: string;
 	role?: string;
 	photo?: string;
-	links?: Link[];
+	links?: ILink[];
 }
 
-export interface Link {
+export interface ILink {
 	name?: string;
 	url?: string;
 	icon?: string;
 }
 
-export interface Show {
+export interface IShow {
 	name?: string;
 	address?: string;
 	date?: string;

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Link } from 'src/app/models/interfaces';
+import { ILink } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/configuration';
 
 @Component({
@@ -10,8 +10,8 @@ export class HomePage {
 
 	public concerts: number;
 	public donations: string;
-	public foundations: Link[];
-	public organizations: Link[];
+	public foundations: ILink[];
+	public organizations: ILink[];
 
 	constructor() {
 		this.concerts = configuration.concerts;

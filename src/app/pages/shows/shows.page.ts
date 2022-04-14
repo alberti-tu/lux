@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Show } from 'src/app/models/interfaces';
+import { IShow } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/configuration';
 import { environment } from 'src/environments/environment';
 
@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ShowsPage {
 
-	public shows: Show[];
+	public shows: IShow[];
 	public mapList: boolean[] = [];
 
 	constructor(private sanitizer: DomSanitizer) {
@@ -33,7 +33,7 @@ export class ShowsPage {
 		return this.sanitizer.bypassSecurityTrustResourceUrl(url);
 	}
 
-	public displayMap(item: Show): boolean {
+	public displayMap(item: IShow): boolean {
 		if (this.shows) {
 			const index = this.shows.indexOf(item);
 			return this.mapList[index];
@@ -42,7 +42,7 @@ export class ShowsPage {
 		}
 	}
 
-	public toggleMap(item: Show): void {
+	public toggleMap(item: IShow): void {
 		if (this.shows) {
 			const index = this.shows.indexOf(item);
 			this.mapList[index] = !this.mapList[index];

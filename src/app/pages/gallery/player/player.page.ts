@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Disc, Link } from 'src/app/models/interfaces';
+import { IDisc, ILink } from 'src/app/models/interfaces';
 import { AudioService, StreamState } from 'src/app/services/audio/audio.service';
 
 @Component({
@@ -10,12 +10,12 @@ import { AudioService, StreamState } from 'src/app/services/audio/audio.service'
 export class PlayerPage implements OnInit, OnDestroy {
 
 	public state: StreamState = this.audioService.initialState();
-	public currentFile: { file: Link, index: number };
+	public currentFile: { file: ILink, index: number };
 
 	private errorList: string[] = [];
 	private playerAction: "previous" | "next" | "play";
 
-	public disc: Disc;
+	public disc: IDisc;
 
 	constructor(public audioService: AudioService, private router: Router) {
 		this.disc = this.router.getCurrentNavigation().extras.state;
@@ -58,7 +58,7 @@ export class PlayerPage implements OnInit, OnDestroy {
 		this.audioService.stop();
 	}
 
-	public openFile(file: Link, index: number): void {
+	public openFile(file: ILink, index: number): void {
 		this.currentFile = { file, index };
 		this.playStream(file.url);
 	}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Link } from 'src/app/models/interfaces';
+import { ILink } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/configuration';
 
 @Component({
@@ -9,7 +9,7 @@ import { configuration } from 'src/configurations/configuration';
 })
 export class HeaderComponent {
 
-	public links: Link[];
+	public links: ILink[];
 	public pages: string[];
 
 	constructor() {

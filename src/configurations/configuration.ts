@@ -1,6 +1,6 @@
-import { Configuration } from "src/app/models/interfaces";
+import { IConfiguration } from "src/app/models/interfaces";
 
-export const configuration: Configuration = {
+export const configuration: IConfiguration = {
 	bank: "IBAN ES 43 2100 3049 1622 0035 6171",
 	concerts: 76,
 	contact: {
