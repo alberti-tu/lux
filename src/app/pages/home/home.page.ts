@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ILink } from 'src/app/models/interfaces';
-import { configuration } from 'src/configurations/configuration';
+import { configuration } from 'src/configurations/home.config';
 
 @Component({
 	templateUrl: './home.page.html',

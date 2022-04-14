@@ -68,3 +68,10 @@ export interface IGlobal {
 	links?: ILink[];
 	pages?: ILink[];
 }
+
+export interface IHome {
+	concerts?: number;
+	donations?: string;
+	foundations?: ILink[];
+	organizations?: ILink[];
+}
