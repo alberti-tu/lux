@@ -34,6 +34,10 @@ button {
 	padding: 0em 0.75em;
 
 	cursor: pointer;
+
+	p {
+		color: inherit!important;
+	}
 	
 	&:hover {
 		color: $primary-color;
@@ -65,7 +69,6 @@ button {
 }
 
 p {
-	color: inherit!important;
 	white-space: pre-line;
 	margin: 0;
 }
