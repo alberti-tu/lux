@@ -1,7 +1,7 @@
 <div class="page about-container">
-	<div class="section">
-		<div class="title" translate>about.title.1</div>
-		<p class="description" translate>about.description</p>
+	<div class="section" *ngIf="description?.data?.length > 0">
+		<div class="title" translate>{{ description.title }}</div>
+		<p *ngFor="let item of description.data" class="description" translate>{{ item }}</p>
 	</div>
 
 	<div class="section" *ngIf="profiles?.length > 0">
