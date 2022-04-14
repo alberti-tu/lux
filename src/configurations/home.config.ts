@@ -1,4 +1,11 @@
-import { IConfigurationHome } from "src/app/models/interfaces";
+import { ILink } from "src/app/models/interfaces";
+
+interface IConfigurationHome {
+	concerts?: number;
+	donations?: string;
+	foundations?: ILink[];
+	organizations?: ILink[];
+}
 
 export const configuration: IConfigurationHome = {
 	concerts: 76,

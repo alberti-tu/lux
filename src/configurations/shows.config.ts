@@ -1,4 +1,8 @@
-import { IConfigurationShows } from "src/app/models/interfaces";
+import { IShow } from "src/app/models/interfaces";
+
+interface IConfigurationShows {
+	shows?: IShow[];
+}
 
 export const configuration: IConfigurationShows = {
 	shows: [

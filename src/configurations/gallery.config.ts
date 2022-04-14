@@ -1,4 +1,8 @@
-import { IConfigurationGallery } from "src/app/models/interfaces";
+import { IDisc } from "src/app/models/interfaces";
+
+interface IConfigurationGallery {
+	discography?: IDisc[];
+}
 
 export const configuration: IConfigurationGallery = {
 	discography: [

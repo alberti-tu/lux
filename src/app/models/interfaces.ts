@@ -34,43 +34,15 @@ export interface ILink {
 	icon?: string;
 }
 
+export interface ISection<T> {
+	title?: string;
+	data?: T;
+}
+
 export interface IShow {
 	name?: string;
 	address?: string;
 	date?: string;
 	price?: string;
 	url?: string;
-}
-
-
-/// experimental
-
-export interface IConfigurationGlobal {
-	bank?: string;
-	footer?: string;
-	links?: ILink[];
-	pages?: ILink[];
-}
-
-export interface IConfigurationHome {
-	concerts?: number;
-	donations?: string;
-	foundations?: ILink[];
-	organizations?: ILink[];
-}
-
-export interface IConfigurationShows {
-	shows?: IShow[];
-}
-
-export interface IConfigurationGallery {
-	discography?: IDisc[];
-}
-
-export interface IConfigurationAbout {
-	contact?: IContact;
-	press?: ILink[];
-	profiles?: IProfile[];
-	projects?: IAccordion[];
-	reports?: ILink[];
 }

@@ -1,4 +1,12 @@
-import { IConfigurationAbout } from "src/app/models/interfaces";
+import { IAccordion, IContact, ILink, IProfile } from "src/app/models/interfaces";
+
+interface IConfigurationAbout {
+	contact?: IContact;
+	press?: ILink[];
+	profiles?: IProfile[];
+	projects?: IAccordion[];
+	reports?: ILink[];
+}
 
 export const configuration: IConfigurationAbout = {
 	contact: {

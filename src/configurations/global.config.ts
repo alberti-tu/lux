@@ -1,4 +1,11 @@
-import { IConfigurationGlobal } from "src/app/models/interfaces";
+import { ILink } from "src/app/models/interfaces";
+
+interface IConfigurationGlobal {
+	bank?: string;
+	footer?: string;
+	links?: ILink[];
+	pages?: ILink[];
+}
 
 export const configuration: IConfigurationGlobal = {
 	bank: "IBAN ES 43 2100 3049 1622 0035 6171",
