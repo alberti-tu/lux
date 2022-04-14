@@ -21,36 +21,51 @@ a {
 }
 
 button {
-	$primary-color: #e2e2e2;
+	$primary-color: #505050;
+	$secondary-color: #ffffff;
 
 	position: relative;
 	transition: all 250ms;
 
-	border: solid 2px white;
+	color: white;
+	background: $primary-color;
+	border: solid 2px $secondary-color;
 	border-radius: 16px;
 	padding: 0em 0.75em;
 
-	background: $primary-color;
 	cursor: pointer;
-
+	
 	&:hover {
-		background: darken($primary-color, 10%);
-		border: solid 2px black;
+		color: $primary-color;
+		background: $secondary-color;
+		border: solid 2px $primary-color;
+
+		img {
+			filter: invert(100%);
+		}
+		
 	}
 
 	&:active {
-		transform: translateY(0.125rem);
+		transform: scale(0.95);
 	}
-	
+
 	&:disabled {
-		border: solid 2px white;
-		background: $primary-color;
+		color: black;
+		background: #d6d6d6;
+		border: none;
+
 		transform: none;
 		cursor: default;
+
+		img {
+			filter: invert(100%);
+		}
 	}
 }
 
 p {
+	color: inherit!important;
 	white-space: pre-line;
 	margin: 0;
 }
@@ -60,11 +75,11 @@ p {
 	cursor: pointer;
 
 	&:hover {
-		transform: scale(1.15);
+		transform: scale(1.05);
 	}
 
 	&:active {
-		transform: translateY(0.125rem);
+		transform: scale(0.98);
 	}
 }
 
