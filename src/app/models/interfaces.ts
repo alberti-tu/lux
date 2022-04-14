@@ -3,23 +3,6 @@ export interface IEnvironment {
 	production: boolean;
 }
 
-export interface IConfiguration {
-	bank?: string;
-	concerts?: number;
-	contact?: IContact;
-	donations?: string;
-	discography?: IDisc[];
-	foundations?: ILink[];
-	links?: ILink[];
-	organizations?: ILink[];
-	pages?: string[];
-	press?: ILink[];
-	profiles?: IProfile[];
-	projects?: IAccordion[];
-	reports?: ILink[];
-	shows?: IShow[];
-}
-
 export interface IAccordion {
 	title?: string;
 	description?: string;

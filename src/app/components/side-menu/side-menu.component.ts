@@ -1,6 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
-import { configuration } from 'src/configurations/configuration';
+import { ILink } from 'src/app/models/interfaces';
+import { configuration } from 'src/configurations/global.config';
 
 @Component({
 	selector: 'side-menu',
@@ -16,7 +17,7 @@ import { configuration } from 'src/configurations/configuration';
 })
 export class SideMenuComponent {
 
-	public pages: string[];
+	public pages: ILink[];
 	public isOpen: boolean;
 
 	constructor() {

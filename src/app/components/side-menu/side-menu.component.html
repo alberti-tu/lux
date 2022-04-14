@@ -3,7 +3,7 @@
 
 	<div class="menu-screen" [@menu]="isOpen ? 'open' : 'closed'" (click)="close()">
 		<div class="menu-group">
-			<div class="menu-item focus" *ngFor="let path of pages" routerLink="/{{ path }}" translate>header.{{ path }}</div>
+			<div class="menu-item focus" *ngFor="let item of pages" routerLink="{{ item.url }}" translate>{{ item.name }}</div>
 		</div>
 	</div>
 </div>
