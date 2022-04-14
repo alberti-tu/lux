@@ -62,16 +62,20 @@ export interface IShow {
 
 /// experimental
 
-export interface IGlobal {
+export interface IConfigurationGlobal {
 	bank?: string;
 	footer?: string;
 	links?: ILink[];
 	pages?: ILink[];
 }
 
-export interface IHome {
+export interface IConfigurationHome {
 	concerts?: number;
 	donations?: string;
 	foundations?: ILink[];
 	organizations?: ILink[];
+}
+
+export interface IConfigurationShows {
+	shows: IShow[];
 }

@@ -1,6 +1,6 @@
-import { IHome } from "src/app/models/interfaces";
+import { IConfigurationHome } from "src/app/models/interfaces";
 
-export const configuration: IHome = {
+export const configuration: IConfigurationHome = {
 	concerts: 76,
 	donations: "16.336€",
 	foundations: [

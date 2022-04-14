@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { IShow } from 'src/app/models/interfaces';
-import { configuration } from 'src/configurations/configuration';
+import { configuration } from 'src/configurations/shows.config';
 import { environment } from 'src/environments/environment';
 
 @Component({

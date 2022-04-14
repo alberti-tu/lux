@@ -1,6 +1,6 @@
-import { IGlobal } from "src/app/models/interfaces";
+import { IConfigurationGlobal } from "src/app/models/interfaces";
 
-export const configuration: IGlobal = {
+export const configuration: IConfigurationGlobal = {
 	bank: "IBAN ES 43 2100 3049 1622 0035 6171",
 	footer: "footer.text",
 	links: [
