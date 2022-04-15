@@ -1,7 +1,7 @@
 <div class="page home-container">
-	<img class="main-image" src="/assets/images/lux.jpg">
+	<img class="main-image" *ngIf="logo" src="/assets/images/{{ logo }}">
 
-	<div class="parallax" style="background-image: url('/assets/images/home-1.jpg')"></div>
+	<div class="parallax" *ngIf="parallax && parallax[0]" style="background-image: url('/assets/images/{{ parallax[0] }}')"></div>
 
 	<div class="cover content" *ngIf="concerts || donations || foundations?.length > 0">
 		<div class="title" translate>home.title.1</div>
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 
-	<div class="parallax" style="background-image: url('/assets/images/home-2.jpg')"></div>
+	<div class="parallax" *ngIf="parallax && parallax[1]" style="background-image: url('/assets/images/{{ parallax[1] }}')"></div>
 
 	<div class="cover content" *ngIf="organizations?.length > 0">
 		<div class="title" translate>home.title.2</div>

@@ -11,13 +11,17 @@ export class HomePage {
 	public concerts: number;
 	public donations: string;
 	public foundations: ILink[];
+	public logo: string;
 	public organizations: ILink[];
+	public parallax: string[];
 
 	constructor() {
 		this.concerts = configuration.concerts;
 		this.donations = configuration.donations;
 		this.foundations = configuration.foundations;
+		this.logo = configuration.logo;
 		this.organizations = configuration.organizations;
+		this.parallax = configuration.parallax
 	}
 
 	public openLink(url: string): void {
