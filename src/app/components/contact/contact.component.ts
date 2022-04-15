@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { IContact } from 'src/app/models/interfaces';
-import { configuration } from 'src/configurations/about.config';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -11,11 +10,9 @@ import { environment } from 'src/environments/environment';
 })
 export class ContactComponent {
 
-	public contact: IContact;
+	@Input() public data: IContact;
 
-	constructor(private sanitizer: DomSanitizer) {
-		this.contact = configuration.contact;
-	}
+	constructor(private sanitizer: DomSanitizer) {	}
 
 	public getMap(query: string): SafeResourceUrl {
 		const url = "https://www.google.com/maps/embed/v1/place?key=" + environment.key + "&q=" + query;

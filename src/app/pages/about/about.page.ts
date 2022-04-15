@@ -8,7 +8,7 @@ import { configuration } from 'src/configurations/about.config';
 })
 export class AboutPage {
 
-	public contact: IContact;
+	public contact: ISection<IContact>;
 	public description: ISection<string[]>;
 	public press: ISection<ILink[]>;
 	public profiles: ISection<IProfile[]>;

@@ -13,7 +13,7 @@
 
 	<div class="section" *ngIf="projects?.data?.length > 0">
 		<div class="title" translate>{{ profiles.title }}</div>
-		<accordion *ngFor="let item of projects.data" title="{{ item.title }}" description="{{ item.description }}"></accordion>
+		<accordion *ngFor="let item of projects.data" [title]="item.title" [description]="item.description"></accordion>
 	</div>
 
 	<div class="section" *ngIf="reports?.data?.length > 0">
@@ -36,8 +36,8 @@
 		</div>
 	</div>
 
-	<div class="section" *ngIf="contact?.email || contact?.address || contact?.phone">
-		<div class="title" translate>about.title.6</div>
-		<contact></contact>
+	<div class="section" *ngIf="contact?.data?.email || contact?.data?.address || contact?.data?.phone">
+		<div class="title" translate>{{ contact.title }}</div>
+		<contact [data]="contact.data"></contact>
 	</div>
 </div>

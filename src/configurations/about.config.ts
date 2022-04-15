@@ -1,7 +1,7 @@
 import { IAccordion, IContact, ILink, IProfile, ISection } from "src/app/models/interfaces";
 
 interface IConfigurationAbout {
-	contact?: IContact;
+	contact?: ISection<IContact>;
 	description?: ISection<string[]>;
 	press?: ISection<ILink[]>;
 	profiles?: ISection<IProfile[]>;
@@ -11,9 +11,12 @@ interface IConfigurationAbout {
 
 export const configuration: IConfigurationAbout = {
 	contact: {
-		address: "C/Cuba 2, 08030 Barcelona",
-		email: "info@luxfundacio.org",
-		phone: "+34 654 22 02 63"
+		title: "about.title.6",
+		data: {
+			address: "C/Cuba 2, 08030 Barcelona",
+			email: "info@luxfundacio.org",
+			phone: "+34 654 22 02 63"
+		}
 	},
 	description: {
 		title: "about.title.1",

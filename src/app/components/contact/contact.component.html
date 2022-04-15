@@ -1,14 +1,14 @@
-<div class="contact-container" *ngIf="contact">
+<div class="contact-container" *ngIf="data">
 	<div class="content">
-		<a class="item" *ngIf="contact.email" href="mailto:{{ contact.email }}">
+		<a class="item" *ngIf="data.email" href="mailto:{{ data.email }}">
 			<img src="/assets/icons/email.svg">
-			<p>{{ contact.email }}</p>
+			<p>{{ data.email }}</p>
 		</a>
-		<a class="item" *ngIf="contact.phone" href="tel:{{ contact.phone }}">
+		<a class="item" *ngIf="data.phone" href="tel:{{ data.phone }}">
 			<img src="/assets/icons/phone.svg">
-			<p>{{ contact.phone }}</p>
+			<p>{{ data.phone }}</p>
 		</a>
 	</div>
 
-	<iframe class="item" *ngIf="contact.address" [src]="getMap(contact.address)" loading="lazy"></iframe>
+	<iframe class="item" *ngIf="data.address" [src]="getMap(data.address)" loading="lazy"></iframe>
 </div>
