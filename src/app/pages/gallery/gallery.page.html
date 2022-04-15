@@ -1,8 +1,8 @@
 <div class="page gallery-container">
-	<div class="section">
-		<div class="title" translate>gallery.title</div>
-		<div class="discography" *ngIf="discography?.length > 0">
-			<div class="disc shadow" *ngFor="let disc of discography; let i = index">
+	<div class="section" *ngIf="discography?.data?.length > 0">
+		<div class="title" *ngIf="discography.title" translate>{{ discography.title }}</div>
+		<div class="discography">
+			<div class="disc shadow" *ngFor="let disc of discography.data; let i = index">
 				<img src="/assets/images/{{ disc.image }}">
 
 				<div class="panel" (click)="discIndex = i">
