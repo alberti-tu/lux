@@ -10,10 +10,10 @@ export class AboutPage {
 
 	public contact: IContact;
 	public description: ISection<string[]>;
-	public press: ILink[];
-	public profiles: IProfile[];
-	public projects: IAccordion[];
-	public reports: ILink[];
+	public press: ISection<ILink[]>;
+	public profiles: ISection<IProfile[]>;
+	public projects: ISection<IAccordion[]>;
+	public reports: ISection<ILink[]>;
 
 	constructor() {
 		this.contact = configuration.contact;

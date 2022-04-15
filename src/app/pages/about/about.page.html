@@ -4,32 +4,32 @@
 		<p *ngFor="let item of description.data" class="description" translate>{{ item }}</p>
 	</div>
 
-	<div class="section" *ngIf="profiles?.length > 0">
-		<div class="title" translate>about.title.2</div>
+	<div class="section" *ngIf="profiles?.data?.length > 0">
+		<div class="title" translate>{{ profiles.title }}</div>
 		<div class="group-row">
-			<profile *ngFor="let user of profiles" [user]="user"></profile>
+			<profile *ngFor="let user of profiles.data" [user]="user"></profile>
 		</div>
 	</div>
 
-	<div class="section" *ngIf="projects?.length > 0">
-		<div class="title" translate>about.title.3</div>
-		<accordion *ngFor="let item of projects" title="{{ item.title }}" description="{{ item.description }}"></accordion>
+	<div class="section" *ngIf="projects?.data?.length > 0">
+		<div class="title" translate>{{ profiles.title }}</div>
+		<accordion *ngFor="let item of projects.data" title="{{ item.title }}" description="{{ item.description }}"></accordion>
 	</div>
 
-	<div class="section" *ngIf="reports?.length > 0">
-		<div class="title" translate>about.title.4</div>
+	<div class="section" *ngIf="reports?.data?.length > 0">
+		<div class="title" translate>{{ reports.title }}</div>
 		<div class="group-row">
-			<a class="file shadow focus" *ngFor="let file of reports" href="/assets/files/{{ file.url }}">
+			<a class="file shadow focus" *ngFor="let file of reports.data" href="/assets/files/{{ file.url }}">
 				<img src="/assets/icons/file.svg">
 				<p>{{ "about.file.report" | translate: { year: file.name } }}</p>
 			</a>
 		</div>
 	</div>
 
-	<div class="section" *ngIf="press?.length > 0">
-		<div class="title" translate>about.title.5</div>
+	<div class="section" *ngIf="press?.data?.length > 0">
+		<div class="title" translate>{{ press.title }}</div>
 		<div class="group-row">
-			<a class="file shadow focus" *ngFor="let file of press" href="/assets/files/{{ file.url }}">
+			<a class="file shadow focus" *ngFor="let file of press.data" href="/assets/files/{{ file.url }}">
 				<img src="/assets/icons/news.svg">
 				<p>{{ file.name }}</p>
 			</a>
