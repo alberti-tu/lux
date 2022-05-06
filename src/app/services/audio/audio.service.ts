@@ -43,7 +43,7 @@ export class AudioService {
 	}
 
 	public stop(): void {
-		this.stop$.next();
+		this.stop$.next(null);
 	}
 
 	public seekTo(seconds: number): void {
