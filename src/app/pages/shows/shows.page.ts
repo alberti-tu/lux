@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { getMapUrl } from 'src/app/global/utils';
 import { IShow } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/shows.config';
 
@@ -13,7 +11,7 @@ export class ShowsPage {
 	public shows: IShow[];
 	public mapList: boolean[] = [];
 
-	constructor(private sanitizer: DomSanitizer) {
+	constructor() {
 		if (configuration.shows) {
 			this.shows = configuration.shows
 				.filter(item => (item.date && new Date(item.date) > new Date()))
@@ -26,10 +24,6 @@ export class ShowsPage {
 		if (url) {
 			window.open(url);
 		}
-	}
-
-	public getMap(query: string): SafeResourceUrl {
-		return this.sanitizer.bypassSecurityTrustResourceUrl(getMapUrl(query));
 	}
 
 	public displayMap(item: IShow): boolean {

@@ -64,10 +64,6 @@
 					cursor: pointer;
 				}
 			}
-
-			iframe {
-				border: none;
-			}
 		}
 
 		.show-map {
@@ -79,7 +75,7 @@
 				}
 			}
 
-			iframe {
+			.maps-container {
 				width: 40%;
 			}
 		}
@@ -93,7 +89,7 @@
 				}
 			}
 
-			iframe {
+			.maps-container {
 				width: 0%;
 			}
 		}
@@ -129,7 +125,7 @@
 					}
 				}
 
-				iframe {
+				.maps-container {
 					height: 128px;
 					width: 100%;
 				}
@@ -146,7 +142,7 @@
 					}
 				}
 
-				iframe {
+				.maps-container {
 					height: 0px;
 					width: 100%;
 				}

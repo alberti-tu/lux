@@ -7,12 +7,14 @@ import { SideMenuComponent } from "./side-menu/side-menu.component";
 import { AccordionComponent } from './accordion/accordion.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
 
 @NgModule({
 	declarations: [
 		AccordionComponent,
 		ContactComponent,
 		FooterComponent,
+		GoogleMapsComponent,
 		HeaderComponent,
 		ProfileComponent,
 		SideMenuComponent,
@@ -21,6 +23,7 @@ import { ProfileComponent } from './profile/profile.component';
 		AccordionComponent,
 		ContactComponent,
 		FooterComponent,
+		GoogleMapsComponent,
 		HeaderComponent,
 		ProfileComponent,
 		SideMenuComponent,

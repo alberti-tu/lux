@@ -10,5 +10,7 @@
 		</a>
 	</div>
 
-	<iframe class="item" *ngIf="data.address" [src]="getMap(data.address)" loading="lazy"></iframe>
+	<div class="maps-container">
+		<google-maps *ngIf="data.address" [search]="data.address"></google-maps>
+	</div>
 </div>

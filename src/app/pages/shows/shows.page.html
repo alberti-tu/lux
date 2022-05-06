@@ -32,7 +32,9 @@
 				<img class="bubble" src="/assets/icons/arrow.svg" (click)="toggleMap(show)">
 			</div>
 
-			<iframe [src]="getMap(show.address)" *ngIf="show.address" loading="lazy"></iframe>
+			<div class="maps-container">
+				<google-maps *ngIf="show.address" [search]="show.address"></google-maps>
+			</div>
 		</div>
 	</div>
 
