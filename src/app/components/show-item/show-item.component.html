@@ -1,0 +1,36 @@
+<div class="show-item-container shadow" ngClass="{{ showMap ? 'show-map' : 'hide-map'}}">
+	<div class="info">
+		<h1 *ngIf="data?.name">{{ data?.name }}</h1>
+		<p *ngIf="data?.address">{{ data?.address }}</p>
+		<p *ngIf="data?.date">{{ data?.date | date: 'EEEE, d MMMM yyyy | H:mm' }}</p>
+		<p *ngIf="data?.price" translate>{{ data?.url ? 'show.ticket.online' : 'show.ticket.offline' }}</p>
+		<p *ngIf="!data?.price" translate>{{ data?.url ? 'show.ticket.booked' : 'show.ticket.free' }}</p>
+
+		<a *ngIf="data?.url" href="{{ data?.url }}">
+			<button *ngIf="data?.price">
+				<p *ngIf="data?.price">{{ data?.price }}</p>
+				<img src="/assets/icons/ticket.svg">
+			</button>
+			<button *ngIf="!data?.price">
+				<p translate>show.info</p>
+			</button>
+		</a>
+
+		<div *ngIf="!data?.url">
+			<button *ngIf="data?.price" disabled>
+				<p *ngIf="data?.price">{{ data?.price }}</p>
+				<img src="/assets/icons/ticket.svg">
+			</button>
+			<button *ngIf="!data?.price" disabled>
+				<p translate>show.free</p>
+			</button>
+		</div>
+
+		<div *ngIf="!data?.url"></div>
+		<img class="bubble" src="/assets/icons/arrow.svg" (click)="toggleMap()">
+	</div>
+
+	<div class="maps-container">
+		<google-maps *ngIf="data?.address" [search]="data?.address"></google-maps>
+	</div>
+</div>

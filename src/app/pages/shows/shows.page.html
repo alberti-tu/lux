@@ -1,44 +1,9 @@
 <div class="page shows-container">
-	<div class="list" *ngIf="shows && shows.length > 0">
-		<div class="item shadow" ngClass="{{ displayMap(show) ? 'show-map' : 'hide-map'}}" *ngFor="let show of shows">
-			<div class="info">
-				<h1 *ngIf="show.name">{{ show.name }}</h1>
-				<p *ngIf="show.address">{{ show.address }}</p>
-				<p *ngIf="show.date">{{ show.date | date: 'EEEE, d MMMM yyyy | H:mm' }}</p>
-				<p *ngIf="show.price" translate>{{ show.url ? 'show.ticket.online' : 'show.ticket.offline' }}</p>
-				<p *ngIf="!show.price" translate>{{ show.url ? 'show.ticket.booked' : 'show.ticket.free' }}</p>
-
-				<a *ngIf="show.url" href="{{ show.url }}">
-					<button *ngIf="show.price">
-						<p *ngIf="show.price">{{ show.price }}</p>
-						<img src="/assets/icons/ticket.svg">
-					</button>
-					<button *ngIf="!show.price">
-						<p translate>show.info</p>
-					</button>
-				</a>
-
-				<div *ngIf="!show.url">
-					<button *ngIf="show.price" disabled>
-						<p *ngIf="show.price">{{ show.price }}</p>
-						<img src="/assets/icons/ticket.svg">
-					</button>
-					<button *ngIf="!show.price" disabled>
-						<p translate>show.free</p>
-					</button>
-				</div>
-
-				<div *ngIf="!show.url"></div>
-				<img class="bubble" src="/assets/icons/arrow.svg" (click)="toggleMap(show)">
-			</div>
-
-			<div class="maps-container">
-				<google-maps *ngIf="show.address" [search]="show.address"></google-maps>
-			</div>
-		</div>
+	<div class="list" *ngIf="shows?.length > 0">
+		<show-item *ngFor="let show of shows" [data]="show"></show-item>
 	</div>
 
-	<div class="empty" *ngIf="!shows || shows.length == 0">
+	<div class="empty" *ngIf="!shows || shows?.length == 0">
 		<img src="/assets/icons/advice.svg">
 		<p translate>show.empty</p>
 	</div>

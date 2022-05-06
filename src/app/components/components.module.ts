@@ -1,13 +1,14 @@
 import { NgModule } from "@angular/core";
 import { SharedModule } from "../shared.module";
 
-import { FooterComponent } from "./footer/footer.component";
-import { HeaderComponent } from "./header/header.component";
-import { SideMenuComponent } from "./side-menu/side-menu.component";
 import { AccordionComponent } from './accordion/accordion.component';
 import { ContactComponent } from './contact/contact.component';
-import { ProfileComponent } from './profile/profile.component';
+import { FooterComponent } from "./footer/footer.component";
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { HeaderComponent } from "./header/header.component";
+import { ProfileComponent } from './profile/profile.component';
+import { ShowItemComponent } from './show-item/show-item.component';
+import { SideMenuComponent } from "./side-menu/side-menu.component";
 
 @NgModule({
 	declarations: [
@@ -17,6 +18,7 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
 		GoogleMapsComponent,
 		HeaderComponent,
 		ProfileComponent,
+		ShowItemComponent,
 		SideMenuComponent,
 	],
 	exports: [
@@ -26,6 +28,7 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
 		GoogleMapsComponent,
 		HeaderComponent,
 		ProfileComponent,
+		ShowItemComponent,
 		SideMenuComponent,
 	],
 	imports: [ SharedModule ]
