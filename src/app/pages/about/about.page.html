@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="section" *ngIf="projects?.data?.length > 0">
-		<div class="title" *ngIf="projects.title" translate>{{ profiles.title }}</div>
+		<div class="title" *ngIf="projects.title" translate>{{ projects.title }}</div>
 		<accordion *ngFor="let item of projects.data" [title]="item.title" [description]="item.description"></accordion>
 	</div>
 
