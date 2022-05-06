@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { getMapUrl } from 'src/app/global/utils';
 import { IContact } from 'src/app/models/interfaces';
-import { environment } from 'src/environments/environment';
 
 @Component({
 	selector: 'contact',
@@ -15,8 +15,7 @@ export class ContactComponent {
 	constructor(private sanitizer: DomSanitizer) {	}
 
 	public getMap(query: string): SafeResourceUrl {
-		const url = "https://www.google.com/maps/embed/v1/place?key=" + environment.key + "&q=" + query;
-		return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+		return this.sanitizer.bypassSecurityTrustResourceUrl(getMapUrl(query));
 	}
 
 }

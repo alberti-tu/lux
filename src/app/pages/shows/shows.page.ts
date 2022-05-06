@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { getMapUrl } from 'src/app/global/utils';
 import { IShow } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/shows.config';
-import { environment } from 'src/environments/environment';
 
 @Component({
 	templateUrl: './shows.page.html',
@@ -29,8 +29,7 @@ export class ShowsPage {
 	}
 
 	public getMap(query: string): SafeResourceUrl {
-		const url = "https://www.google.com/maps/embed/v1/place?key=" + environment.key + "&q=" + query;
-		return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+		return this.sanitizer.bypassSecurityTrustResourceUrl(getMapUrl(query));
 	}
 
 	public displayMap(item: IShow): boolean {
