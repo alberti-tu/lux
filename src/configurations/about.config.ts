@@ -11,7 +11,7 @@ interface IConfigurationAbout {
 
 export const configuration: IConfigurationAbout = {
 	contact: {
-		title: "about.title.6",
+		title: "about.contact.title",
 		data: {
 			address: "C/Cuba 2, 08030 Barcelona",
 			email: "info@luxfundacio.org",
@@ -19,18 +19,25 @@ export const configuration: IConfigurationAbout = {
 		}
 	},
 	description: {
-		title: "about.title.1",
-		data: ["about.description"]
+		title: "about.description.title",
+		data: [
+			"about.description.data.1",
+			"about.description.data.2",
+			"about.description.data.3",
+			"about.description.data.4",
+			"about.description.data.5",
+			"about.description.data.6"
+		]
 	},
 	press: {
-		title: "about.title.5",
+		title: "about.press.title",
 		data: [
 			{ name: "Núvol", url: "núvol.pdf" },
 			{ name: "Revista musical catalana", url: "revista-musical-catalana.pdf" },
 		]
 	},
 	profiles: {
-		title: "about.title.2",
+		title: "about.profiles.title",
 		data: [
 			{
 				name: "Santi Mirón",
@@ -43,16 +50,16 @@ export const configuration: IConfigurationAbout = {
 		]
 	},
 	projects: {
-		title: "about.title.3",
+		title: "about.projects.title",
 		data: [
-			{ title: "about.project.1.title", description: "about.project.1.description" },
-			{ title: "about.project.2.title", description: "about.project.2.description" },
-			{ title: "about.project.3.title", description: "about.project.3.description" },
-			{ title: "about.project.4.title", description: "about.project.4.description" },
+			{ title: "about.projects.data.1.title", description: "about.projects.data.1.description" },
+			{ title: "about.projects.data.2.title", description: "about.projects.data.2.description" },
+			{ title: "about.projects.data.3.title", description: "about.projects.data.3.description" },
+			{ title: "about.projects.data.4.title", description: "about.projects.data.4.description" },
 		]
 	},
 	reports: {
-		title: "about.title.4",
+		title: "about.reports.title",
 		data: [
 			{ name: "2018", url: "report-2018.pdf" },
 			{ name: "2017", url: "report-2017.pdf" },
