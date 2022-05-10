@@ -1,5 +1,4 @@
 export interface IEnvironment {
-	key: string;
 	production: boolean;
 }
 

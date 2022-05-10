@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { environment } from 'src/environments/environment';
 
 @Component({
 	selector: 'google-maps',
@@ -14,7 +13,7 @@ export class GoogleMapsComponent {
 	constructor(private sanitizer: DomSanitizer) { }
 
 	public getMap(): SafeResourceUrl {
-		const url = "https://www.google.com/maps/embed/v1/place?key=" + environment.key + "&q=" + this.search;
+		const url = 'https://maps.google.com?output=embed&q=' + this.search
 		return this.sanitizer.bypassSecurityTrustResourceUrl(url);
 	}
 
