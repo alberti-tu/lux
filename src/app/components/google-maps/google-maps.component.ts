@@ -12,8 +12,8 @@ export class GoogleMapsComponent {
 
 	constructor(private sanitizer: DomSanitizer) { }
 
-	public getMap(): SafeResourceUrl {
-		const url = 'https://maps.google.com?output=embed&q=' + this.search
+	public getMap(zoom: number = 16): SafeResourceUrl {
+		const url = `https://maps.google.com?output=embed&q=${this.search}&z=${zoom}`
 		return this.sanitizer.bypassSecurityTrustResourceUrl(url);
 	}
 
