@@ -70,13 +70,15 @@
     },
     "show": {
         "empty": "Actualmente no hay conciertos anunciados, permanece atento a nuestras redes sociales.",
-        "free": "Gratis",
-        "info": "Más",
-        "ticket": {
+        "status": {
             "booked": "Entrada gratuita con limitación de aforo",
             "free": "Entrada gratuita",
             "offline": "Comprar entrada en taquilla",
             "online": "Comprar entrada online"
+        },
+        "ticket": {
+            "free": "Gratis",
+            "info": "Más"
         }
     }
 }

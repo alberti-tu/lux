@@ -70,13 +70,15 @@
     },
     "show": {
         "empty": "There are currently no concerts announced, stay tuned to our social networks.",
-        "free": "Free",
-        "info": "More",
-        "ticket": {
+        "status": {
             "booked": "Free ticket with limited capacity",
             "free": "Free ticket",
             "offline": "Ticket office",
             "online": "Online ticket"
+        },
+        "ticket": {
+            "free": "Free",
+            "info": "More"
         }
     }
 }
