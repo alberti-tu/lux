@@ -5,7 +5,7 @@
 
 ## 1. Set up
 
-Download and install [Node JS](https://nodejs.org).
+Download and install [NodeJS](https://nodejs.org).
 
 ## 2. Clone repo
 
@@ -13,21 +13,23 @@ Download and install [Node JS](https://nodejs.org).
 git clone https://github.com/alberti-tu/lux
 ```
 
-## 2. Install required dependences
+## 3. Install required dependences
 
 ```bash
 cd lux
 npm install
 ```
 
-## 3. Launch a development server
+## 4. Launch a development server
 
 ```bash
 npm start
 ```
+The project can be tested on http://localhost:4200. To stop the development server press Ctrl+c.
 
-## 4. Build project
+## 5. Build project
 
 ```bash
 npm run build
 ```
+This command generates the compiled static files of the project under the /out folder.
