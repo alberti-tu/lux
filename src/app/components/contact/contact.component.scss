@@ -5,6 +5,10 @@
 	margin: 2em auto;
 
 	.content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
 		padding: 1em 0em;
 
 		.item {
@@ -13,6 +17,7 @@
 			flex-wrap: wrap;
 	
 			align-items: center;
+			margin: 0.5rem 1rem;
 	
 			img {
 				height: 20px;
