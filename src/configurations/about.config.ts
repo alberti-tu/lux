@@ -49,7 +49,6 @@ export const configuration: IConfigurationAbout = {
 			}
 		]
 	},
-	/*
 	projects: {
 		title: "about.projects.title",
 		data: [
@@ -59,7 +58,6 @@ export const configuration: IConfigurationAbout = {
 			{ title: "about.projects.data.4.title", description: "about.projects.data.4.description" },
 		]
 	},
-	*/
 	reports: {
 		title: "about.reports.title",
 		data: [

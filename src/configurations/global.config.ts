@@ -18,7 +18,7 @@ export const configuration: IConfigurationGlobal = {
 	pages: [
 		{ name: "header.home", url: "/home"},
 		{ name: "header.shows", url: "/shows"},
-		//{ name: "header.gallery", url: "/gallery"},
+		{ name: "header.gallery", url: "/gallery"},
 		{ name: "header.about", url: "/about"},
 	]
 }
