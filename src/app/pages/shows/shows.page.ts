@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IShow } from 'src/app/models/interfaces';
-import { configuration } from 'src/configurations/shows.config';
+import { configuration } from 'src/configurations/development/shows.config';
 
 @Component({
 	templateUrl: './shows.page.html',

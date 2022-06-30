@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IAccordion, IContact, ILink, IProfile, ISection } from 'src/app/models/interfaces';
-import { configuration } from 'src/configurations/about.config';
+import { configuration } from 'src/configurations/development/about.config';
 
 @Component({
 	templateUrl: './about.page.html',

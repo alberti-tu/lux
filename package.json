@@ -2,7 +2,9 @@
   "name": "lux",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve --host 0.0.0.0",
+    "start": "npm run start:development",
+	"start:development": "ng serve --host 0.0.0.0 --configuration development",
+	"start:production": "ng serve --host 0.0.0.0 --configuration production",
     "build": "ng build",
     "test": "ng test"
   },

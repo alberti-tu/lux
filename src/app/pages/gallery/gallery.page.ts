@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { IDisc, ISection } from 'src/app/models/interfaces';
 import { DeviceService } from 'src/app/services/device/device.service';
-import { configuration } from 'src/configurations/gallery.config';
+import { configuration } from 'src/configurations/development/gallery.config';
 
 @Component({
 	templateUrl: './gallery.page.html',

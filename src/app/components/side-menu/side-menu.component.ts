@@ -1,7 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { ILink } from 'src/app/models/interfaces';
-import { configuration } from 'src/configurations/global.config';
+import { configuration } from 'src/configurations/development/global.config';
 
 @Component({
 	selector: 'side-menu',

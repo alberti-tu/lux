@@ -33,7 +33,12 @@
 								{ "type": "anyComponentStyle", "maximumWarning": "4kb", "maximumError": "8kb" }
 							],
 							"fileReplacements": [
-								{ "replace": "src/environments/environment.ts", "with": "src/environments/environment.prod.ts" }
+								{ "replace": "src/configurations/development/environment.ts", "with": "src/configurations/production/environment.ts" },
+								{ "replace": "src/configurations/development/about.config.ts", "with": "src/configurations/production/about.config.ts" },
+								{ "replace": "src/configurations/development/gallery.config.ts", "with": "src/configurations/production/gallery.config.ts" },
+								{ "replace": "src/configurations/development/global.config.ts", "with": "src/configurations/production/global.config.ts" },
+								{ "replace": "src/configurations/development/home.config.ts", "with": "src/configurations/production/home.config.ts" },
+								{ "replace": "src/configurations/development/shows.config.ts", "with": "src/configurations/production/shows.config.ts" }
 							],
 							"outputHashing": "all"
 						},

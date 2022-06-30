@@ -27,7 +27,21 @@ npm start
 ```
 The project can be tested on http://localhost:4200. To stop the development server press Ctrl+c.
 
-## 5. Build project
+## 5. Change environment
+
+If you want, you can swap between development or production data using the following commands.
+
+```bash
+npm run start:development
+```
+
+Or
+
+```bash
+npm run start:production
+```
+
+## 6. Build project
 
 ```bash
 npm run build
