@@ -10,7 +10,7 @@ interface IConfigurationHome {
 }
 
 export const configuration: IConfigurationHome = {
-	concerts: 76,
+	concerts: 85,
 	donations: "16.336€",
 	foundations: [
 		{ name: "Arrels fundació", icon: "arrels.jpg", url: "https://www.arrelsfundacio.org" },
