@@ -80,6 +80,8 @@
 				}
 			}
 		}
-	},
-	"defaultProject": "lux"
+    },
+    "cli": {
+      "analytics": false
+    }
 }
