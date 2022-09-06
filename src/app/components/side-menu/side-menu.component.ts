@@ -1,39 +1,42 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ILink } from 'src/app/models/interfaces';
-import { configuration } from 'src/configurations/development/global.config';
 
 @Component({
 	selector: 'side-menu',
 	templateUrl: './side-menu.component.html',
 	styleUrls: ['./side-menu.component.scss'],
 	animations: [
-		trigger('menu', [
-			state('open', style({ opacity: 1, background: '#000000e6' })),
-			state('closed', style({ opacity: 0, height: '0px', width: '0px', 'font-size': '0em' })),
-			transition('open <=> closed', [ animate('0.25s') ]),
-		]),
-	],
+		trigger('menuTrigger', [
+			state('open', style({ transform: 'translateX(0%)' })),
+			state('close', style({ transform: 'translateX(-200%)' })),
+			transition('open <=> close', [animate('500ms ease-in-out')])
+		])
+	]
 })
 export class SideMenuComponent {
 
-	public pages: ILink[];
-	public isOpen: boolean;
+	@Input() public pages: ILink[] = [];
+
+	public showMenu: boolean;
 
 	constructor() {
-		this.pages = configuration.pages;
+		this.showMenu = false
 	}
 
-	public open(): void {
-		this.isOpen = true;
+	public close(event?: MouseEvent): void {
+		event?.stopPropagation();
+		this.showMenu = false;
 	}
 
-	public close(): void {
-		this.isOpen = false;
+	public open(event?: MouseEvent): void {
+		event?.stopPropagation();
+		this.showMenu = true;
 	}
 
-	public toggle(): void {
-		this.isOpen = !this.isOpen;
+	public toggle(event?: MouseEvent): void {
+		event?.stopPropagation();
+		this.showMenu = !this.showMenu;
 	}
 
 }

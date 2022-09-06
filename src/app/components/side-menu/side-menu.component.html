@@ -1,10 +1,16 @@
-<div class="side-menu-container" *ngIf="pages?.length > 0">
-	<img src="/assets/icons/menu.svg" (click)="open()">
-
-	<div class="menu-screen" [@menu]="isOpen ? 'open' : 'closed'" (click)="close()">
-		<div class="menu-group">
-			<div class="menu-item focus" *ngFor="let item of pages" routerLink="{{ item.url }}" translate>{{ item.name }}</div>
-		</div>
-	</div>
+<div (click)="open($event)">
+	<ng-content></ng-content>
 </div>
 
+<div class="side-menu-container" [@menuTrigger]="showMenu ? 'open' : 'close'">
+	<div class="backdrop" (click)="close($event)"></div>
+
+	<div class="menu-list">
+		<a *ngFor="let page of pages" href="{{ page?.url }}">
+			<div class="menu-item" *ngIf="page?.url">
+				<img *ngIf="page?.icon" src="/assets/icons/{{ page?.icon }}.svg" alt="{{ page?.icon }}.svg">
+				<p *ngIf="page?.name" translate>{{ page?.name }}</p>
+			</div>
+		</a>
+	</div>
+</div>

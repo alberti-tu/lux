@@ -3,11 +3,11 @@ import { ILink } from 'src/app/models/interfaces';
 import { configuration } from 'src/configurations/development/global.config';
 
 @Component({
-	selector: 'header',
-	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.scss']
+	selector: 'toolbar',
+	templateUrl: './toolbar.component.html',
+	styleUrls: ['./toolbar.component.scss']
 })
-export class HeaderComponent {
+export class ToolbarComponent {
 
 	public links: ILink[];
 	public pages: ILink[];

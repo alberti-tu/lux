@@ -16,9 +16,9 @@ export const configuration: IConfigurationGlobal = {
 		{ name: "YouTube", icon: "youtube", url: "https://www.youtube.com/channel/UCgjysEgq2bRrLgKF1psSyFg" }
 	],
 	pages: [
-		{ name: "header.home", url: "/home"},
-		{ name: "header.shows", url: "/shows"},
-		{ name: "header.gallery", url: "/gallery"},
-		{ name: "header.about", url: "/about"},
+		{ name: "header.home", url: "/home" },
+		{ name: "header.shows", url: "/shows" },
+		{ name: "header.gallery", url: "/gallery" },
+		{ name: "header.about", url: "/about" },
 	]
 }
